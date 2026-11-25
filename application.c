@@ -15,6 +15,7 @@
 #include <proto/intuition.h>
 #include <proto/icon.h>
 #include <dos/dos.h>
+#include <dos/dostags.h>
 #include <proto/dos.h>
 
 #include <stdlib.h>
@@ -104,7 +105,9 @@ enum
     REXX_ABOUT,
     REXX_SAVE,
     REXX_OPEN,
-    REXX_APPTOFRONT
+    REXX_APPTOFRONT,
+    REXX_SYNCTEXFORWARD,
+    REXX_SYNCTEXINVERSE
 };
 
 static LONG Rexx(void);
@@ -113,6 +116,8 @@ REXXHOOK(RexxHookAbout, REXX_ABOUT);
 REXXHOOK(RexxHookSave, REXX_SAVE);
 REXXHOOK(RexxHookOpen, REXX_OPEN);
 REXXHOOK(RexxHookAppToFront, REXX_APPTOFRONT);
+REXXHOOK(RexxHookSyncTeXForward, REXX_SYNCTEXFORWARD);
+REXXHOOK(RexxHookSyncTeXInverse, REXX_SYNCTEXINVERSE);
 
 /* repeated from toolbar_class.c - needs refactoring... */
 static float zoomPresets[] = {8.33f, 12.5f, 25.0f, 33.33f, 50.0f, 66.67f, 75.0f, 100.0f, 125.0f, 150.0f, 200.0f, 300.0f, 400.0f, 600.0f, 800.0f, 1000.0f};
@@ -123,6 +128,8 @@ static const struct MUI_Command rexxcommands[] =
 	{ "SAVE",         NULL,                0, (struct Hook *)&RexxHookSave       },
 	{ "OPEN",         "FILE/K,NEWTAB/S",   2, (struct Hook *)&RexxHookOpen       },
 	{ "APPTOFRONT",   "APPTOFRONT/S",      1, (struct Hook *)&RexxHookAppToFront },
+	{ "SYNCTEXFORWARD", "FILE/K,LINE/N,COLUMN/N", 3, (struct Hook *)&RexxHookSyncTeXForward },
+	{ "SYNCTEXINVERSE", "PAGE/N,H/N,V/N", 3, (struct Hook *)&RexxHookSyncTeXInverse },
 	{ NULL,           NULL,                0, NULL                               }
 };
 
@@ -1070,6 +1077,96 @@ DEFMMETHOD(DragDrop)
 	return DOSUPER;
 }
 
+/* Start the editor selected for SyncTeX inverse search.  The command may
+ * contain %f (file), %l (line), %c (column) and %% placeholders.  If file or
+ * line placeholders are missing they are appended automatically. */
+static void stappend(char **dst, char *end, const char *src)
+{
+	while (*src != 0 && *dst < end - 1)
+		*(*dst)++ = *src++;
+	**dst = 0;
+}
+
+static void stappendnum(char **dst, char *end, long value)
+{
+	char buffer[32];
+	snprintf(buffer, sizeof(buffer), "%ld", value);
+	stappend(dst, end, buffer);
+}
+
+static void stappendquoted(char **dst, char *end, const char *src)
+{
+	stappend(dst, end, "\"");
+	stappend(dst, end, src);
+	stappend(dst, end, "\"");
+}
+
+static void StartSyncTeXEditor(Object *obj, CONST_STRPTR command,
+	const char *file, long line, long column)
+{
+	char cmd[4096];
+	char *dst = cmd;
+	char *end = cmd + sizeof(cmd);
+	const char *src = command;
+	int hasfile = FALSE;
+	int hasline = FALSE;
+
+	if (src == NULL || *src == 0)
+	{
+		DoMethod(obj, MUIM_VPDF_LogMessage, MUIV_VPDF_LogMessage_Warning,
+			LOCSTR(MSG_SYNCTEX_NO_EDITOR));
+		return;
+	}
+	if (file == NULL || file[0] == 0)
+		return;
+
+	while (*src != 0)
+	{
+		if (src[0] == '%' && src[1] == 'f')
+		{
+			stappendquoted(&dst, end, file);
+			hasfile = TRUE;
+			src += 2;
+		}
+		else if (src[0] == '%' && src[1] == 'l')
+		{
+			stappendnum(&dst, end, line);
+			hasline = TRUE;
+			src += 2;
+		}
+		else if (src[0] == '%' && src[1] == 'c')
+		{
+			stappendnum(&dst, end, column > 0 ? column : 1);
+			src += 2;
+		}
+		else if (src[0] == '%' && src[1] == '%')
+		{
+			stappend(&dst, end, "%");
+			src += 2;
+		}
+		else
+		{
+			*dst++ = *src++;
+			if (dst >= end)
+				break;
+			*dst = 0;
+		}
+	}
+
+	if (!hasfile)
+	{
+		stappend(&dst, end, " ");
+		stappendquoted(&dst, end, file);
+	}
+	if (!hasline)
+	{
+		stappend(&dst, end, " ");
+		stappendnum(&dst, end, line);
+	}
+
+	SystemTagList(cmd, SYS_Asynch, TRUE, TAG_DONE);
+}
+
 /* rexx handling */
 
 static LONG Rexx(void)
@@ -1105,6 +1202,28 @@ static LONG Rexx(void)
 
 		case REXX_APPTOFRONT:
 		break;
+
+		case REXX_SYNCTEXFORWARD:
+		{
+			char *file = (char *)*params;
+			long line = (long)params[1];
+			long column = (long)params[2];
+
+			DoMethod(obj, MUIM_VPDF_SyncTeXForward, file, line, column);
+			break;
+		}
+
+		case REXX_SYNCTEXINVERSE:
+		{
+			struct MUIP_VPDF_SyncTeXInverse msg;
+
+			msg.MethodID = MUIM_VPDF_SyncTeXInverse;
+			msg.page = (LONG)params[0];
+			msg.x = (double)params[1];
+			msg.y = (double)params[2];
+			DoMethodA(obj, &msg);
+			break;
+		}
 	}
 
 	return 0;
@@ -1124,6 +1243,61 @@ DEFMMETHOD(VPDF_SelectionCopy)
 		}
 	}
 
+	return TRUE;
+}
+
+DEFMMETHOD(VPDF_SyncTeXForward)
+{
+	Object *activewindow;
+	Object *documentview;
+	struct MUIP_DocumentView_SyncTeXForward fmsg;
+
+	activewindow = (Object*)DoMethod(obj, MUIM_VPDF_FindActiveWindow);
+	if (activewindow == NULL)
+		return FALSE;
+
+	documentview = (Object*)xget(activewindow, MUIA_VPDFWindow_ActiveDocumentView);
+	if (documentview == NULL || !xget(documentview, MUIA_DocumentView_SyncTeX))
+		return FALSE;
+
+	fmsg.MethodID = MUIM_DocumentView_SyncTeXForward;
+	fmsg.file = msg->file;
+	fmsg.line = msg->line;
+	fmsg.column = msg->column;
+	return DoMethodA(documentview, &fmsg);
+}
+
+DEFMMETHOD(VPDF_SyncTeXInverse)
+{
+	Object *activewindow;
+	Object *documentview;
+	struct MUIP_DocumentView_SyncTeXInverse imsg;
+	char file[1024];
+	long line = 0;
+	long column = 0;
+	CONST_STRPTR editor;
+
+	activewindow = (Object*)DoMethod(obj, MUIM_VPDF_FindActiveWindow);
+	if (activewindow == NULL)
+		return FALSE;
+
+	documentview = (Object*)xget(activewindow, MUIA_VPDFWindow_ActiveDocumentView);
+	if (documentview == NULL || !xget(documentview, MUIA_DocumentView_SyncTeX))
+		return FALSE;
+
+	imsg.MethodID = MUIM_DocumentView_SyncTeXInverse;
+	imsg.page = msg->page;
+	imsg.x = msg->x;
+	imsg.y = msg->y;
+	imsg.file = file;
+	imsg.fileSize = sizeof(file);
+	imsg.line = &line;
+	imsg.column = &column;
+	if (!DoMethodA(documentview, &imsg))
+		return FALSE;
+
+	editor = (CONST_STRPTR)xget(obj, MUIA_VPDFSettings_SyncTeXEditor);
+	StartSyncTeXEditor(obj, editor, file, line, column);
 	return TRUE;
 }
 
@@ -1278,6 +1452,8 @@ DECMMETHOD(VPDF_SelectionCopy)
 DECMMETHOD(VPDF_FullScreen)
 DECMMETHOD(VPDF_RefreshViewMenu)
 DECMMETHOD(VPDF_SetZoomInWindow)
+DECMMETHOD(VPDF_SyncTeXForward)
+DECMMETHOD(VPDF_SyncTeXInverse)
 ENDMTABLE
 
 DECSUBCLASS_NC(MUIC_Application, VPDFClass)

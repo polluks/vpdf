@@ -29,6 +29,8 @@
 #define MUIM_VPDF_FullScreen         (MUIM_VPDF_Dummy + 21)
 #define MUIM_VPDF_RefreshViewMenu    (MUIM_VPDF_Dummy + 22)
 #define MUIM_VPDF_SetZoomInWindow    (MUIM_VPDF_Dummy + 23)
+#define MUIM_VPDF_SyncTeXForward     (MUIM_VPDF_Dummy + 24)
+#define MUIM_VPDF_SyncTeXInverse     (MUIM_VPDF_Dummy + 25)
 
 struct MUIP_VPDF_SaveFile{ULONG MethodID; int windowid; char *filename; int mode;};  // mode is MUIV_VPDFWindow_OpenFile_XXX
 struct MUIP_VPDF_OpenFile{ULONG MethodID; int windowid; char *filename; int mode;};  // mode is MUIV_VPDFWindow_OpenFile_XXX
@@ -53,6 +55,8 @@ struct MUIP_VPDF_SelectionCopy{ULONG MethodID;};
 struct MUIP_VPDF_FullScreen{ULONG MethodID; int fullScreen; int windowid;};
 struct MUIP_VPDF_RefreshViewMenu{ULONG MethodID; Object *window;};
 struct MUIP_VPDF_SetZoomInWindow{ULONG MethodID; int windowid; int zoom;};
+struct MUIP_VPDF_SyncTeXForward{ULONG MethodID; CONST_STRPTR file; LONG line; LONG column;};
+struct MUIP_VPDF_SyncTeXInverse{ULONG MethodID; LONG page; double x; double y;};
 
 #define MUIV_VPDF_RequestFile_Load 1
 #define MUIV_VPDF_RequestFile_Save 2

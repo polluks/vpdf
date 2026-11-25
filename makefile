@@ -58,7 +58,7 @@ endif
 #selection between shared libs and staticly linnked
 OBJS = locale.o  vpdf.o poppler_io.o poppler.o clipboard.o window.o application.o logger.o settings.o  \
        fontcache.o arrowstring_class.o  pagenumberclass.o printer.o reggae_export.o  poppler_printer.o printer_image.o \
-       poppler_export.o
+       poppler_export.o synctex.o
 
 #selection between shared libs and staticly linnked
 CAIRO_LIBS = ${FONTCONFIGLIB} -lcairo
@@ -214,6 +214,7 @@ settings.o:		settings.c mcc/classes.h settings.h
 poppler.o:		poppler.cpp poppler.h poppler_device.h poppler-$(POPPLERVER)/.extractedandpatched
 poppler_printer.o:		poppler_printer.cpp poppler_device.h poppler_printer.h
 poppler_io.o:	poppler_io.cpp poppler_io.h
+synctex.o:		synctex.c synctex.h
 fontcache.o:	fontcache.c fcstr.c fontcache.h
 printer.o:      printer.c mcc/classes.h VPDF_strings.h poppler_printer.h
 pagenumberclass.o: pagenumberclass.c pagenumberclass.h

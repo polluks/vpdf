@@ -217,6 +217,7 @@ DEFNEW
 	static char *ps_levels[] = {"Level 2", "Level 3", NULL};
 	Object *layout_cyc, *scaling_cyc, *color_reproduction_cyc, *outline_check, *log_check;
 	Object *psmode_cyc, *ps_string, *psmode_check;
+	Object *synctex_editor_string;
 
 	if(!layouts_msgs[0])
 	{
@@ -268,6 +269,18 @@ DEFNEW
 					MUIA_Cycle_Entries, color_reproduction_msgs,
 				TAG_END),
 			TAG_END)),
+			MUIA_Group_Child, MUI_NewObject(MUIC_Group,
+				MUIA_Group_Horiz, TRUE,
+				MUIA_Group_Child, LLabel1(LOCSTR(MSG_SETTINGS_SYNCTEX_EDITOR)),
+				MUIA_Group_Child, (synctex_editor_string = MUI_NewObject(MUIC_String,
+					MUIA_Frame, MUIV_Frame_String,
+					MUIA_String_Contents, "",
+					MUIA_String_MaxLen, 512,
+				TAG_END)),
+			TAG_END),
+			MUIA_Group_Child, MUI_NewObject(MUIC_Text,
+				MUIA_Text_Contents, LOCSTR(MSG_SETTINGS_SYNCTEX_HINT),
+			TAG_END),
 		TAG_END),
 
 		/* windows settings group */
@@ -327,6 +340,8 @@ DEFNEW
 		register_attribute(ATTR(MUIA_VPDFSettings_Layout),            layout_cyc,             MUIA_Cycle_Active, VPDF_SGROUP_LAYOUT,  ETYPE_NUMERIC, MUIV_DocumentView_Layout_Single);
 		register_attribute(ATTR(MUIA_VPDFSettings_Scaling),           scaling_cyc,            MUIA_Cycle_Active, VPDF_SGROUP_SCALING, ETYPE_NUMERIC, MUIV_DocumentLayout_Scaling_FitPage);
 		register_attribute(ATTR(MUIA_VPDFSettings_ColorReproduction), color_reproduction_cyc, MUIA_Cycle_Active, VPDF_SGROUP_COLOR,   ETYPE_NUMERIC, MUIV_DocumentView_ColorReproduction_Fast);
+
+		register_attribute(ATTR(MUIA_VPDFSettings_SyncTeXEditor), synctex_editor_string, MUIA_String_Contents, VPDF_SGROUP_LAYOUT, ETYPE_STRING, (IPTR)"");
 
 		register_attribute(ATTR(MUIA_VPDFSettings_Outline), outline_check, MUIA_Selected, VPDF_SGROUP_GUI, ETYPE_NUMERIC, TRUE);
 		register_attribute(ATTR(MUIA_VPDFSettings_OpenLog), log_check,     MUIA_Selected, VPDF_SGROUP_GUI, ETYPE_NUMERIC, TRUE);

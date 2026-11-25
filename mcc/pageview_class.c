@@ -39,6 +39,8 @@
 #include "documentview_class.h"
 #include "documentlayout_class.h"
 #include "annotation_class.h"
+#include "../application.h"
+#include "../synctex.h"
 
 #include "system/chunky.h"
 #include "system/memory.h"
@@ -972,7 +974,78 @@ METHOD riHandleEvent(struct IClass *cl,Object *obj,struct MUIP_HandleEvent *msg)
 							double x = mx;
 							double y = my;
 							char *url = NULL;
-							void *link = pdfFindLink(data->doc, data->page, x, y);
+							void *link = NULL;
+							Object *docview = objFindContainerByAttribute(obj, MUIA_DocumentView_PDFDocument);
+
+							/* Amiga+click starts inverse SyncTeX search */
+							if (docview != NULL &&
+								(msg->imsg->Qualifier & (IEQUALIFIER_LCOMMAND | IEQUALIFIER_RCOMMAND)) &&
+								xget(docview, MUIA_DocumentView_SyncTeX) &&
+								data->image != NULL && data->image->width > 0 && data->image->height > 0)
+							{
+								double nx = (double)mx / data->image->width;
+								double ny = (double)my / data->image->height;
+								double ox, oy, ux, uy;
+								float mw, mh;
+								float rawWidth, rawHeight;
+								int rotation;
+								struct MUIP_VPDF_SyncTeXInverse invmsg;
+
+								if (nx < 0) nx = 0; else if (nx > 1) nx = 1;
+								if (ny < 0) ny = 0; else if (ny > 1) ny = 1;
+
+								ox = nx - 0.5;
+								oy = ny - 0.5;
+
+								/* invert the rotation used by the marker code */
+								if (data->rotation == 0)
+								{
+									ux = ox; uy = oy;
+								}
+								else if (data->rotation == 1)
+								{
+									ux = oy; uy = -ox;
+								}
+								else if (data->rotation == 2)
+								{
+									ux = -ox; uy = -oy;
+								}
+								else
+								{
+									ux = -oy; uy = ox;
+								}
+
+								mw = pdfGetPageMediaWidth(data->doc, data->page);
+								mh = pdfGetPageMediaHeight(data->doc, data->page);
+								if (mw <= 0 || mh <= 0)
+									break;
+
+								rotation = pdfGetPageRotate(data->doc, data->page);
+								if (rotation == 90 || rotation == 270)
+								{
+									rawWidth = mh;
+									rawHeight = mw;
+								}
+								else
+								{
+									rawWidth = mw;
+									rawHeight = mh;
+								}
+
+								/* undo the page's own /Rotate before querying SyncTeX */
+								synctexDisplayToPage(rotation, rawWidth, rawHeight,
+									(ux + 0.5) * mw, (uy + 0.5) * mh,
+									&invmsg.x, &invmsg.y);
+
+								invmsg.MethodID = MUIM_VPDF_SyncTeXInverse;
+								invmsg.page = data->page;
+								DoMethodA(_app(obj), &invmsg);
+
+								data->mousedown = TRUE;
+								break;
+							}
+
+							link = pdfFindLink(data->doc, data->page, x, y);
 							if (link != NULL)
 							{
 								int page = pdfGetActionPageFromLink(data->doc, link);

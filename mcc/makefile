@@ -30,8 +30,8 @@ clean:
 .c.o:
 	$(CC) $(CFLAGS_LESS) $(INCLUDES) -c $*.c
 
-pageview_class.o:	 pageview_class.c pageview_class.h classes.h ../poppler.h
-documentview_class.o:	 documentview_class.c classes.h ../poppler.h
+pageview_class.o:	 pageview_class.c pageview_class.h classes.h ../application.h ../poppler.h ../synctex.h
+documentview_class.o:	 documentview_class.c documentview_class.h classes.h ../poppler.h ../synctex.h
 outlineview_class.o:    outlineview_class.c classes.h ../poppler.h
 continuouslayout_class.o:   continuouslayout_class.c documentlayout_class.h classes.h ../poppler.h
 singlepagelayout_class.o:   singlepagelayout_class.c documentlayout_class.h classes.h ../poppler.h

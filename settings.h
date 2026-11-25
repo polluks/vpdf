@@ -25,7 +25,8 @@
 #define MUIA_VPDFSettings_PrintingMode (MUIA_VPDF_TagBase + 38)
 #define MUIA_VPDFSettings_PSMode      (MUIA_VPDF_TagBase + 39)
 #define MUIA_VPDFSettings_ColorReproduction (MUIA_VPDF_TagBase + 40)
-#define MUIA_VPDFSettings_Last        (MUIA_VPDF_TagBase + 41)
+#define MUIA_VPDFSettings_SyncTeXEditor (MUIA_VPDF_TagBase + 41)
+#define MUIA_VPDFSettings_Last        (MUIA_VPDF_TagBase + 42)
 
 struct MUIP_VPDFSettings_FromObjects{ULONG MethodID;};
 struct MUIP_VPDFSettings_ToObjects{ULONG MethodID;};

@@ -676,6 +676,16 @@ float pdfGetPageMediaHeight(void *_ctx, int page)
 	return height;
 }
 
+int pdfGetPageRotate(void *_ctx, int page)
+{
+	ENTER_SECTION
+	struct devicecontext *ctx = (struct devicecontext*)_ctx;
+	Page *pdfpage = ctx->doc->getCatalog()->getPage(page);
+	int rotate = pdfpage->getRotate();
+	LEAVE_SECTION
+	return rotate;
+}
+
 int pdfGetDocumentDimensions(void *_ctx, float *width, float *height)
 {
 	struct devicecontext *ctx = (struct devicecontext*)_ctx;

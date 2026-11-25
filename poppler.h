@@ -23,6 +23,7 @@ int pdfSaveFile(void *_ctx, char *filename, int mode);
 
 float pdfGetPageMediaWidth(void *_ctx, int page);
 float pdfGetPageMediaHeight(void *_ctx, int page);
+int pdfGetPageRotate(void *_ctx, int page);
 int pdfGetDocumentDimensions(void *_ctx, float *width, float *height);
 int	pdfGetPagesNum(void *_ctx);
 

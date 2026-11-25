@@ -331,3 +331,12 @@ The document is password protected
 MSG_REQ_PASSWORD_ENTER (//)
 Enter Password:
 ;
+MSG_SETTINGS_SYNCTEX_EDITOR (//)
+SyncTeX editor:
+;
+MSG_SETTINGS_SYNCTEX_HINT (//)
+Use %f for file, %l for line, %c for column. Amiga+click a page for inverse search. ARexx: SYNCTEXFORWARD FILE/K,LINE/N.
+;
+MSG_SYNCTEX_NO_EDITOR (//)
+No SyncTeX editor configured. Set one in Settings -> Document.
+;

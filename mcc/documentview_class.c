@@ -55,6 +55,7 @@
 #include "toolbar_class.h"
 #include "pageslider_class.h"
 #include "clipboard.h"
+#include "../synctex.h"
 
 #include "system/chunky.h"
 #include "system/gentexture.h"
@@ -64,6 +65,8 @@
 struct Data
 {
 	void *doc;
+	void *synctex;
+	int synctexMarkerPage;
 	Object *layoutgroup;
 	Object *renderer;
 	Object *sldPage;
@@ -181,6 +184,8 @@ DEFNEW
 		char *userpw=NULL,*ownerpw=NULL;
 		unsigned long errCode;
 		unsigned long *errCodePtr;
+		data->synctex = NULL;
+		data->synctexMarkerPage = 0;
 		data->dragaction = MUIV_DocumentView_DragAction_Scroll;
 		data->rotation = MUIV_DocumentLayout_Rotation_None;
 		data->filename = strdup((char*)GetTagData(MUIA_DocumentView_FileName, (ULONG)NULL, INITTAGS));
@@ -205,7 +210,9 @@ DEFNEW
 			CoerceMethod(cl, obj, OM_DISPOSE);
 			return 0;
 		}
-		
+
+		data->synctex = synctexOpen(data->filename);
+
 		data->annotationLists = calloc(pdfGetPagesNum(data->doc), sizeof(struct MinList*));
 		
 		sprintf(textbuffer, "%s has been loaded", data->filename);
@@ -320,9 +327,12 @@ DEFDISP
 {
 	GETDATA;
 
+	if (data->synctex != NULL)
+		synctexClose(data->synctex);
+
 	if (data->doc != NULL)
 		pdfDelete(data->doc);
-		
+
 	if (data->filename != NULL)
 		free(data->filename);
 		
@@ -392,6 +402,10 @@ DEFGET
 
 		case MUIA_DocumentView_PDFDocument:
 			*(ULONG*)msg->opg_Storage = (ULONG)data->doc;
+			return TRUE;
+
+		case MUIA_DocumentView_SyncTeX:
+			*(ULONG*)msg->opg_Storage = (ULONG)synctexIsOpen(data->synctex);
 			return TRUE;
 
 		case MUIA_DocumentView_Page:
@@ -799,6 +813,122 @@ DEFMMETHOD(DocumentView_SelectionCopy)
 	return FALSE;
 }
 
+DEFMMETHOD(DocumentView_SyncTeXForward)
+{
+	GETDATA;
+	struct SynctexHit hit;
+	float coords[4];
+	float displayWidth, displayHeight;
+	double rawWidth, rawHeight;
+	double dx1, dy1, dx2, dy2;
+	int rotation;
+	int page;
+
+	if (!synctexIsOpen(data->synctex) || msg->file == NULL || msg->line <= 0)
+		return FALSE;
+
+	page = xget(obj, MUIA_DocumentView_Page);
+	if (!synctexForward(data->synctex, msg->file, msg->line, msg->column, page, &hit))
+		return FALSE;
+
+	page = hit.page;
+	if (page < 1 || page > pdfGetPagesNum(data->doc))
+	{
+		synctexFreeHit(&hit);
+		return FALSE;
+	}
+
+	displayWidth = pdfGetPageMediaWidth(data->doc, page);
+	displayHeight = pdfGetPageMediaHeight(data->doc, page);
+	if (displayWidth <= 0 || displayHeight <= 0)
+	{
+		synctexFreeHit(&hit);
+		return FALSE;
+	}
+
+	/* SyncTeX records the unrotated page, VPDF marks the displayed page. */
+	rotation = pdfGetPageRotate(data->doc, page);
+	if (rotation == 90 || rotation == 270)
+	{
+		rawWidth = displayHeight;
+		rawHeight = displayWidth;
+	}
+	else
+	{
+		rawWidth = displayWidth;
+		rawHeight = displayHeight;
+	}
+
+	synctexPageToDisplay(rotation, rawWidth, rawHeight,
+		hit.x, hit.y, &dx1, &dy1);
+	synctexPageToDisplay(rotation, rawWidth, rawHeight,
+		hit.x + hit.width, hit.y + hit.height, &dx2, &dy2);
+
+	coords[0] = (float)((dx1 < dx2 ? dx1 : dx2) / displayWidth);
+	coords[1] = (float)((dy1 < dy2 ? dy1 : dy2) / displayHeight);
+	coords[2] = (float)((dx1 > dx2 ? dx1 : dx2) / displayWidth);
+	coords[3] = (float)((dy1 > dy2 ? dy1 : dy2) / displayHeight);
+
+	/* keep the marker inside the page */
+	if (coords[0] < 0) coords[0] = 0;
+	if (coords[1] < 0) coords[1] = 0;
+	if (coords[2] > 1) coords[2] = 1;
+	if (coords[3] > 1) coords[3] = 1;
+
+	synctexFreeHit(&hit);
+
+	if (data->synctexMarkerPage > 0 && data->synctexMarkerPage != page)
+	{
+		Object *oldpage = (Object*)DoMethod(obj, MUIM_DocumentView_FindViewForPage, data->synctexMarkerPage);
+		if (oldpage != NULL)
+			DoMethod(oldpage, MUIM_PageView_RemoveMarker, MUIV_PageView_RemoveMarker_All);
+	}
+
+	set(obj, MUIA_DocumentView_Page, page);
+
+	{
+		Object *pageview = (Object*)DoMethod(obj, MUIM_DocumentView_FindViewForPage, page);
+		if (pageview != NULL)
+		{
+			DoMethod(pageview, MUIM_PageView_RemoveMarker, MUIV_PageView_RemoveMarker_All);
+			DoMethod(pageview, MUIM_PageView_AddMarker, MUIV_PageView_AddMarker_New, coords, 0xa0ff0000);
+			DoMethod(pageview, MUIM_PageView_Update, -1, -1, -1, -1);
+		}
+	}
+
+	data->synctexMarkerPage = page;
+	return TRUE;
+}
+
+DEFMMETHOD(DocumentView_SyncTeXInverse)
+{
+	GETDATA;
+	struct SynctexHit hit;
+
+	if (!synctexIsOpen(data->synctex) || msg->file == NULL || msg->fileSize <= 0 ||
+		msg->line == NULL || msg->column == NULL)
+		return FALSE;
+
+	if (!synctexInverse(data->synctex, msg->page, msg->x, msg->y, &hit))
+		return FALSE;
+
+	if (hit.file != NULL)
+	{
+		strncpy(msg->file, hit.file, msg->fileSize - 1);
+		msg->file[msg->fileSize - 1] = 0;
+	}
+	else
+	{
+		msg->file[0] = 0;
+	}
+
+	*msg->line = hit.line;
+	*msg->column = hit.column;
+	synctexFreeHit(&hit);
+
+	return TRUE;
+}
+
 BEGINMTABLE
 	DECNEW
 	DECSET
@@ -816,6 +946,8 @@ BEGINMTABLE
 	//DECMMETHOD(DocumentView_UpdateFormWidgets)
 	DECMMETHOD(DocumentView_ClearSelection)
 	DECMMETHOD(DocumentView_SelectionCopy)
+	DECMMETHOD(DocumentView_SyncTeXForward)
+	DECMMETHOD(DocumentView_SyncTeXInverse)
 
 ENDMTABLE
 
