@@ -1,0 +1,475 @@
+## version $VER: VPDF.catalog 1.13 (25.02.2025)
+## language français
+## codeset 0
+;
+## chunk AUTH Mickael PERNOT, Antoine Dubourg
+;
+; VPDF locales
+; Michal Zukowski 2015-2022
+;
+MSG_APPLICATION_DESCRIPTION
+Visualisateur de PDF
+; PDF Viewer
+;
+MSG_PRINTER_RANGE
+Intervalle d'impression
+; Print Range
+;
+MSG_PRINTER_PAGES
+Pages :
+; Pages:
+;
+MSG_PRINTER_FIRSTPAGE
+Première page :
+; First Page:
+;
+MSG_PRINTER_LASTPAGE
+Dernière page :
+; Last Page:
+;
+MSG_PRINTER_MANUAL
+Sélection manuelle
+; Manual Selection
+;
+MSG_PRINTER_RESET
+Remise à zéro
+; Reset
+;
+MSG_PRINTER_REVERSE
+Inverser les pages
+; Reverse Pages
+;
+MSG_PRINTER_ORIENTATION
+Impression
+; Page Orientation
+;
+MSG_PRINTER_COPIES
+Copies :
+; Copies:
+;
+MSG_PRINTER_COLLATE
+Assembler
+; Collate
+;
+MSG_PRINTER_SCALING
+Feuilles par page :
+; Page Scaling:
+;
+MSG_PRINTER_PAGESPERSHEET
+Pages par feuille :
+; Pages per Sheet:
+;
+MSG_PRINTER_ORDER
+Ordre des pages :
+; Pages Order:
+;
+MSG_PRINTER_AUTOROTATE
+Rotation et centrage automatique
+; Auto Rotate and Center
+;
+MSG_PRINTER_DRIVER
+Pilote
+; Driver
+;
+MSG_PRINTER_PREFERENCES
+Préférences de l'imprimante
+; Printer Preferences
+;
+MSG_PRINTER_WINTITLE
+VPDF · Impression de documents
+; VPDF · Print Document
+;
+MSG_PRINTER_PRINT
+Im_primer
+; _Print
+;
+MSG_PRINTER_CANCEL
+Annuler
+; Cancel
+;
+MSG_PRINTER_OUTPUT
+Sortie :
+; Output:
+;
+MSG_PRINTER_ODD
+Impaire
+; Odd
+;
+MSG_PRINTER_EVEN
+Paire
+; Even
+;
+MSG_PRINTER_ODDEVEN
+Paire et impaire
+; Odd and Even
+;
+MSG_PRINTER_NONE
+Normal
+; None
+;
+MSG_PRINTER_BEST
+Adapté
+; Best
+;
+MSG_PRINTER_MULTIPLE
+Plusieurs pages par feuille
+; Multiple pages per sheet
+;
+MSG_PRINTER_CUSTOM
+Personnalisé
+; Custom
+;
+MSG_PRINTER_HORIZONTAL_VERTICAL
+Horizontal - Vertical
+; Horizontal-Vertical
+MSG_PRINTER_HORIZONTAL_VERTICALREVERSED
+Horizontal - Vertical inversé
+; Horizontal - Vertical Reversed
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL
+Horizontal inversé - Vertical
+; Horizontal Reversed-Vertical
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL_REVERSED
+Horizontal inversé - Vertical inversé
+; Horizontal Reversed-Vertical Reversed
+MSG_PRINTER_VERTICAL_HORIZONTAL
+Vertical - Horizontal
+; Vertical-Horizontal
+MSG_PRINTER_VERTICALREVERSED_HORIZONTAL
+Vertical inversé - Horizontal
+; Vertical Reversed-Horizontal
+MSG_PRINTER_VERTICAL_HORIZONTALREVERSED
+Vertical - Horizontal inversé
+; Vertical-Horizontal Reversed
+MSG_PRINTER_VERTICAL_REVERSED_HORIZONTALREVERSED
+Vertical inversé - Horizontal inversé
+; Vertical Reversed-Horizontal Reversed
+MSG_PRINTER_ABORT
+Interrompre
+; Abort
+;
+MSG_MENU_PROJECT
+Projet
+; Project
+;
+MSG_MENU_NEWWIN
+Nouvelle fenêtre...
+; New Window...
+MSG_MENU_NEWTAB
+Nouvel onglet
+; New Tab
+MSG_MENU_FILE
+Ouvrir un fichier...
+; Open File...
+MSG_MENU_RECENT
+Ouvrir un document récent...
+; Open Recent
+MSG_MENU_PRINT
+Imprimer...
+; Print...
+MSG_MENU_ABOUT
+À propos...
+; About...
+MSG_MENU_QUIT
+Quitter
+; Quit
+MSG_MENU_EDIT
+Éditer
+; Edit
+MSG_MENU_COPY
+Copier
+; Copy
+MSG_MENU_LOG
+Journal...
+; Log...
+MSG_MENU_SETTINGS
+Réglages
+; Settings
+MSG_MENU_SETTINGS_SETTINGS
+Préférences...
+; Settings...
+MSG_MENU_SETTINGS_SAVE
+Sauver
+; Save as Default
+MSG_MENU_SETTINGS_MUI
+MUI...
+; MUI...
+MSG_MENU_WINDOWS
+Fenêtres
+; Windows
+MSG_NOFILE
+Aucun fichier chargé.
+; No file loaded.
+MSG_SAVE
+_Sauver
+; _Save
+MSG_CANCEL
+_Annuler
+; _Cancel
+MSG_USE
+_Utiliser
+; _Use
+MSG_WINDOWS
+Fenêtres
+; Windows
+MSG_SETTINGS_LAYOUT
+Disposition :
+; Layout:
+MSG_SETTINGS_SCALING
+Mise à l'échelle :
+; Scaling:
+MSG_SETTINGS_OUTLINE
+Ouvrir les aperçus du document
+; Open document outline
+MSG_SETTINGS_DOCUMENT
+Document
+; Document
+MSG_SETTINGS_LOGWINDOW
+Ouvrir automatiquement la fenêtre du journal
+; Open log window automatically
+MSG_REQ_OPEN
+Choisir le fichier à ouvrir...
+; Select File to Open...
+MSG_REQ_SAVE
+Choisir le fichier à sauver...
+; Select File to Save...
+MSG_REQ_DRAWER
+Sélectionner le répertoire...
+; Select Drawer...
+MSG_TOOLBAR_ZOOMIN
+Zoom avant
+; Zoom In
+MSG_TOOLBAR_ZOOMOUT
+Zoom arrière
+; Zoom Out
+MSG_TOOLBAR_COUNTERCLOCKWISE
+Pivoter dans le sens anti-horaire
+; Rotate counterclockwise
+MSG_TOOLBAR_CLOCKWISE
+Pivoter dans le sens horaire
+; Rotate clockwise
+MSG_TOOLBAR_MARK
+_Marquer
+; _Mark
+MSG_TOOLBAR_SCROLL
+_Défiler
+; _Scroll
+MSG_TOOLBAR_OUTLINE
+Ap_erçus
+; _Outline
+MSG_TOOLBAR_FITPAGE
+Ajuster à la page
+; Fit Page
+MSG_TOOLBAR_FITWIDTH
+Ajuster à la largeur
+; Fit Width
+MSG_TOOLBAR_SINGLE
+Page à page
+; Single
+MSG_TOOLBAR_CONTINUOUS
+En continu
+; Continuous
+MSG_TOOLBAR_FACING
+Côte à côte
+; Facing
+MSG_TOOLBAR_CONT_FACING
+Côte à côte et en continu
+; Continuous Facing
+MSG_SEARCH_NEXT
+Suiva_nt
+; _Next
+MSG_SEARCH_PREV
+_Précédent
+; _Prev
+MSG_SEARCH_END
+Fin du document
+; End of Document
+MSG_SEARCH_LABEL
+Rechercher :
+; S_earch:
+MSG_SLIDER_PAGE
+Page %ld/%ld
+; Page %ld/%ld
+MSG_MENU_SAVE
+Sauver le fichier...
+; Save File...
+MSG_MENU_EXPORT
+Exporter en bitmap...
+; Export to bitmap...
+MSG_EXPORT_WINTITLE
+Exporter un document en bitmap
+; Export document to bitmaps
+MSG_SETTINGS_LAYOUT_SINGLE
+Une seule page
+; Single page
+MSG_SETTINGS_LAYOUT_CONTINOUS
+Pages en continu
+; Continuous pages
+MSG_SETTINGS_LAYOUT_FACING
+Deux pages côte à côte
+; Facing pages
+MSG_SETTINGS_LAYOUT_CONTINOUS_FACING
+Deux pages côte à côte et en continu
+; Continuous facing pages
+MSG_SETTINGS_SCALINGS_WINDOW
+Ajuster à la fenêtre
+; Fit to window
+MSG_SETTINGS_SCALINGS_WIDTH
+Ajuster à la largeur de la fenêtre
+; Fit to window width
+MSG_SETTINGS_SCALINGS_ORIGINAL
+Original
+; Original
+MSG_MENU_VIEW
+Vue
+; View
+MSG_MENU_VIEW_FULLSCREEN
+Plein écran
+; Fullscreen
+MSG_MENU_VIEW_OUTLINE
+Afficher les aperçus
+; Show outline
+MSG_MENU_VIEW_TOOLBAR
+Affiche la barre d'outils
+; Show toolbar
+MSG_MENU_SET_ZOOM
+Régler le zoom...
+; Set zoom
+MSG_MENU_SET_LAYOUT
+Régler la disposition...
+; Set layout
+MSG_MENU_VIEW_SET_LAYOUT_SINGLE
+Une seule page
+; Single page
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS
+Pages en continu
+; Continuous pages
+MSG_MENU_VIEW_SET_LAYOUT_FACING
+Deux pages côte à côte
+; Facing pages
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS_FACING
+Deux pages côte à côte en continu
+; Continuous facing pages
+MSG_MENU_ZOOM_FIT_PAGE
+Ajuster à la page
+; Fit page
+MSG_MENU_ZOOM_FIT_WIDTH
+Ajuster à la largeur
+; Fit width
+MSG_LOAD_IMAGE
+Charger une image...
+; Load image...
+MSG_SAVE_IMAGE
+Sauver une image...
+; Save image...
+MSG_PRINTING
+Impression
+; Printing
+MSG_SETTINGS_COLOR_REPRODUCTION
+Reproduction des couleurs :
+; Color Reproduction:
+MSG_SETTINGS_COLOR_REPRODUCTION_FAST
+Rapide
+; Fast
+MSG_SETTINGS_COLOR_REPRODUCTION_ACCURATE
+Précise
+; Accurate
+MSG_PRINTER_OUTPUTPATH
+Chemin de sortie :
+; Output path:
+;
+MSG_PRINTER_OUTFILE
+(VersFichier)
+; (ToFile)
+;
+MSG_PRINTER_PROFILE
+Profil
+; Profile
+;
+MSG_PRINTER_CURRENT_PAGE
+Page affichée
+; Current page
+;
+MSG_EXPORT_PARAMETERS
+Paramètres d'exportation
+; Export parameters
+;
+MSG_EXPORT_OUTPUTFILE
+Fichier de sortie :
+; Output file:
+;
+MSG_EXPORT_BASENAME
+Choisir le nom de base
+; Select base name
+;
+MSG_EXPORT_SUFFIX
+le suffixe
+; suffix
+;
+MSG_EXPORT_DPI
+PPP (DPI) :
+; DPI:
+;
+MSG_EXPORT_PAGES
+Pages
+; Pages
+;
+MSG_EXPORT_EXPORT
+_Exporter
+; _Export
+;
+MSG_EXPORT_STATUS
+Enregistre la page %ld...
+; Saving page %ld...
+;
+MSG_EXPORT_ERROR_TITLE
+Erreur de VPDF durant l'exportation
+; VPDF Export Document Error
+;
+MSG_EXPORT_ERROR_STATUS
+Échec lors de l'initialisation du périphérique de sortie
+; Failed to initialize output device
+;
+MSG_PRINTER_BOOKLET
+Livret
+; Booklet
+;
+MSG_TOOLBAR_NOTES
+No_tes
+; No_tes
+;
+MSG_MENU_VIEW_NOTES
+Afficher les notes
+; Show notes
+;
+MSG_SETTINGS_NOTES
+Ouvre les notesd du document
+; Open document notes
+;
+MSG_SETTINGS_PAGEDIMS
+Affiche les dimensions de la page
+; Show page dimensions
+;
+MSG_MENU_VIEW_PAGEDIMS
+Afficher les dimensions de la page
+; Show page dimensions
+;
+MSG_MENU_SETTINGS_SNAPSHOT_DOCVIEW
+Aperçu de la mise en page du document
+; Snapshot Document Layout
+;
+MSG_MENU_MERGE_FILES
+Fusionner les documents ouverts
+; Merge Open Documents
+;
+MSG_MENU_SAVEPAGE
+Enregistrer la page actuel vers le fichier...
+; Save current page to File...
+;
+MSG_REQ_PASSWORD_TITLE
+Ce document est protégé par un mot de passe
+; The document is password protected
+;
+MSG_REQ_PASSWORD_ENTER
+Mot de passe :
+; Enter Password:
+;

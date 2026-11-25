@@ -1,0 +1,475 @@
+## version $VER: VPDF.catalog 1.16 (10.10.2025)
+## language türkçe
+## codeset 0
+;
+## chunk AUTH Serkan Dursun Ibrahim Alper Sönmez
+;
+; VPDF locales
+; Michal Zukowski 2015-2022
+;
+MSG_APPLICATION_DESCRIPTION
+PDF Görüntüleyici
+; PDF Viewer
+;
+MSG_PRINTER_RANGE
+Yazdýrma Aralýðý
+; Print Range
+;
+MSG_PRINTER_PAGES
+Sayfalar:
+; Pages:
+;
+MSG_PRINTER_FIRSTPAGE
+Ýlk Sayfa:
+; First Page:
+;
+MSG_PRINTER_LASTPAGE
+Son Sayfa:
+; Last Page:
+;
+MSG_PRINTER_MANUAL
+Elle Seçim
+; Manual Selection
+;
+MSG_PRINTER_RESET
+Sýfýrla
+; Reset
+;
+MSG_PRINTER_REVERSE
+Sayfalarý Ters Çevir
+; Reverse Pages
+;
+MSG_PRINTER_ORIENTATION
+Sayfa Yönlendirmesi
+; Page Orientation
+;
+MSG_PRINTER_COPIES
+Kopya sayýsý:
+; Copies:
+;
+MSG_PRINTER_COLLATE
+Harmanla
+; Collate
+;
+MSG_PRINTER_SCALING
+Sayfa Ölçekle:
+; Page Scaling:
+;
+MSG_PRINTER_PAGESPERSHEET
+Yaprak baþýna sayfa:
+; Pages per Sheet:
+;
+MSG_PRINTER_ORDER
+Sayfa Sýrasý:
+; Pages Order:
+;
+MSG_PRINTER_AUTOROTATE
+Otomatik Çeviþ ve Ortala
+; Auto Rotate and Center
+;
+MSG_PRINTER_DRIVER
+Sürücü
+; Driver
+;
+MSG_PRINTER_PREFERENCES
+Yazýcý Tercihleri
+; Printer Preferences
+;
+MSG_PRINTER_WINTITLE
+VPDF · Belge Yazdýr
+; VPDF · Print Document
+;
+MSG_PRINTER_PRINT
+Yazdýr
+; _Print
+;
+MSG_PRINTER_CANCEL
+Vazgeç
+; Cancel
+;
+MSG_PRINTER_OUTPUT
+Çýktý:
+; Output:
+;
+MSG_PRINTER_ODD
+Tek
+; Odd
+;
+MSG_PRINTER_EVEN
+Hat
+; Even
+;
+MSG_PRINTER_ODDEVEN
+Tek ve Hat
+; Odd and Even
+;
+MSG_PRINTER_NONE
+Hiçbiri
+; None
+;
+MSG_PRINTER_BEST
+En Ýyi
+; Best
+;
+MSG_PRINTER_MULTIPLE
+Yaprak baþýna birden çok sayfa
+; Multiple pages per sheet
+;
+MSG_PRINTER_CUSTOM
+Özel
+; Custom
+;
+MSG_PRINTER_HORIZONTAL_VERTICAL
+Yatay-Dikey
+; Horizontal-Vertical
+MSG_PRINTER_HORIZONTAL_VERTICALREVERSED
+Yatay-Dikey Ters
+; Horizontal - Vertical Reversed
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL
+Yatay Ters-Dikey
+; Horizontal Reversed-Vertical
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL_REVERSED
+Yatay Ters-Dikey Ters
+; Horizontal Reversed-Vertical Reversed
+MSG_PRINTER_VERTICAL_HORIZONTAL
+Dikey-Yatay
+; Vertical-Horizontal
+MSG_PRINTER_VERTICALREVERSED_HORIZONTAL
+Dikey Ters-Yatay
+; Vertical Reversed-Horizontal
+MSG_PRINTER_VERTICAL_HORIZONTALREVERSED
+Dikey-Yatay Ters
+; Vertical-Horizontal Reversed
+MSG_PRINTER_VERTICAL_REVERSED_HORIZONTALREVERSED
+Dikey Ters-Yatay Ters
+; Vertical Reversed-Horizontal Reversed
+MSG_PRINTER_ABORT
+Ýptal
+; Abort
+;
+MSG_MENU_PROJECT
+Proje
+; Project
+;
+MSG_MENU_NEWWIN
+Yeni Pencere...
+; New Window...
+MSG_MENU_NEWTAB
+Yeni Sekme
+; New Tab
+MSG_MENU_FILE
+Dosya Aç...
+; Open File...
+MSG_MENU_RECENT
+Son Kullanýlanlarý Aç
+; Open Recent
+MSG_MENU_PRINT
+Yazdýr...
+; Print...
+MSG_MENU_ABOUT
+Hakkýnda...
+; About...
+MSG_MENU_QUIT
+Çýkýþ
+; Quit
+MSG_MENU_EDIT
+Düzen
+; Edit
+MSG_MENU_COPY
+Kopyala
+; Copy
+MSG_MENU_LOG
+Günlük...
+; Log...
+MSG_MENU_SETTINGS
+Ayarlar
+; Settings
+MSG_MENU_SETTINGS_SETTINGS
+Ayarlar...
+; Settings...
+MSG_MENU_SETTINGS_SAVE
+Varsayýlan Olarak Kaydet
+; Save as Default
+MSG_MENU_SETTINGS_MUI
+MUI...
+; MUI...
+MSG_MENU_WINDOWS
+Pencereler
+; Windows
+MSG_NOFILE
+Dosya yüklenemedi.
+; No file loaded.
+MSG_SAVE
+_Kaydet
+; _Save
+MSG_CANCEL
+_Vazgeç
+; _Cancel
+MSG_USE
+K_ullan
+; _Use
+MSG_WINDOWS
+Pencereler
+; Windows
+MSG_SETTINGS_LAYOUT
+Düzen:
+; Layout:
+MSG_SETTINGS_SCALING
+Ölçekle:
+; Scaling:
+MSG_SETTINGS_OUTLINE
+Belge ana hatlarýný aç
+; Open document outline
+MSG_SETTINGS_DOCUMENT
+Belge
+; Document
+MSG_SETTINGS_LOGWINDOW
+Günlük penceresini otomatik olarak aç
+; Open log window automatically
+MSG_REQ_OPEN
+Açýlacak Dosyayý Seçin...
+; Select File to Open...
+MSG_REQ_SAVE
+Kaydedilecek Dosyayý Seçin...
+; Select File to Save...
+MSG_REQ_DRAWER
+Çekmece Seç...
+; Select Drawer...
+MSG_TOOLBAR_ZOOMIN
+Yakýnlaþ
+; Zoom In
+MSG_TOOLBAR_ZOOMOUT
+Uzaklaþ
+; Zoom Out
+MSG_TOOLBAR_COUNTERCLOCKWISE
+Saat yönünün tersine çevir
+; Rotate counterclockwise
+MSG_TOOLBAR_CLOCKWISE
+Saat yönünde çevir
+; Rotate clockwise
+MSG_TOOLBAR_MARK
+Ýþare_tle
+; _Mark
+MSG_TOOLBAR_SCROLL
+Ka_ydýr
+; _Scroll
+MSG_TOOLBAR_OUTLINE
+Ana_hat
+; _Outline
+MSG_TOOLBAR_FITPAGE
+Sayfaya Sýðdýr
+; Fit Page
+MSG_TOOLBAR_FITWIDTH
+Geniþliðe Sýðdýr
+; Fit Width
+MSG_TOOLBAR_SINGLE
+Tek
+; Single
+MSG_TOOLBAR_CONTINUOUS
+Devamlý
+; Continuous
+MSG_TOOLBAR_FACING
+Karþýlýklý
+; Facing
+MSG_TOOLBAR_CONT_FACING
+Devamlý Karþýlýklý
+; Continuous Facing
+MSG_SEARCH_NEXT
+Ý_leri
+; _Next
+MSG_SEARCH_PREV
+_Geri
+; _Prev
+MSG_SEARCH_END
+Belge Sonu
+; End of Document
+MSG_SEARCH_LABEL
+_Ara:
+; S_earch:
+MSG_SLIDER_PAGE
+Sayfa %ld/%ld
+; Page %ld/%ld
+MSG_MENU_SAVE
+Dosyayý Kaydet...
+; Save File...
+MSG_MENU_EXPORT
+Bit eþlem olarak dýþa aktar...
+; Export to bitmap...
+MSG_EXPORT_WINTITLE
+Belgeyi bit eþlemlere dýþa aktar
+; Export document to bitmaps
+MSG_SETTINGS_LAYOUT_SINGLE
+Tek sayfa
+; Single page
+MSG_SETTINGS_LAYOUT_CONTINOUS
+Devamlý sayfalar
+; Continuous pages
+MSG_SETTINGS_LAYOUT_FACING
+Karþýlýklý sayfalar
+; Facing pages
+MSG_SETTINGS_LAYOUT_CONTINOUS_FACING
+Devamlý karþýlýklý sayfalar
+; Continuous facing pages
+MSG_SETTINGS_SCALINGS_WINDOW
+Pencereye sýðdýr
+; Fit to window
+MSG_SETTINGS_SCALINGS_WIDTH
+Pencere geniþliðine sýðdýr
+; Fit to window width
+MSG_SETTINGS_SCALINGS_ORIGINAL
+Orjinal
+; Original
+MSG_MENU_VIEW
+Görüntüle
+; View
+MSG_MENU_VIEW_FULLSCREEN
+Tam Ekran
+; Fullscreen
+MSG_MENU_VIEW_OUTLINE
+Anahat Göster
+; Show outline
+MSG_MENU_VIEW_TOOLBAR
+Araç Çubuðu Göster
+; Show toolbar
+MSG_MENU_SET_ZOOM
+Yakýnlaþmayý Ayarla
+; Set zoom
+MSG_MENU_SET_LAYOUT
+Görünümü Ayarla
+; Set layout
+MSG_MENU_VIEW_SET_LAYOUT_SINGLE
+Tek Sayfa
+; Single page
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS
+Devamlý sayfalar
+; Continuous pages
+MSG_MENU_VIEW_SET_LAYOUT_FACING
+Karþýlýklý sayfalar
+; Facing pages
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS_FACING
+Devamlý karþýlýklý sayfalar
+; Continuous facing pages
+MSG_MENU_ZOOM_FIT_PAGE
+Sayfaya Sýðdýr
+; Fit page
+MSG_MENU_ZOOM_FIT_WIDTH
+Geniþliðe sýðdýr
+; Fit width
+MSG_LOAD_IMAGE
+Resim yükle...
+; Load image...
+MSG_SAVE_IMAGE
+Resmi kaydet...
+; Save image...
+MSG_PRINTING
+Yazdýrýlýyor
+; Printing
+MSG_SETTINGS_COLOR_REPRODUCTION
+Renk Üretimi:
+; Color Reproduction:
+MSG_SETTINGS_COLOR_REPRODUCTION_FAST
+Hýzlý
+; Fast
+MSG_SETTINGS_COLOR_REPRODUCTION_ACCURATE
+Doðru
+; Accurate
+MSG_PRINTER_OUTPUTPATH
+Çýktý yolu:
+; Output path:
+;
+MSG_PRINTER_OUTFILE
+(Dosyaya)
+; (ToFile)
+;
+MSG_PRINTER_PROFILE
+Profil
+; Profile
+;
+MSG_PRINTER_CURRENT_PAGE
+Geçerli sayfa
+; Current page
+;
+MSG_EXPORT_PARAMETERS
+Parametreleri dýþa aktar
+; Export parameters
+;
+MSG_EXPORT_OUTPUTFILE
+Çýktý dosyasý:
+; Output file:
+;
+MSG_EXPORT_BASENAME
+Baz alýnacak adýný seçin
+; Select base name
+;
+MSG_EXPORT_SUFFIX
+sonek
+; suffix
+;
+MSG_EXPORT_DPI
+DPI:
+; DPI:
+;
+MSG_EXPORT_PAGES
+Sayfalar
+; Pages
+;
+MSG_EXPORT_EXPORT
+Dýþa Aktar
+; _Export
+;
+MSG_EXPORT_STATUS
+%ld sayfasý kaydediliyor...
+; Saving page %ld...
+;
+MSG_EXPORT_ERROR_TITLE
+VPDF Belgeyi Dýþa Aktarmadý
+; VPDF Export Document Error
+;
+MSG_EXPORT_ERROR_STATUS
+Çýktý cihazý baþlatýlamadý
+; Failed to initialize output device
+;
+MSG_PRINTER_BOOKLET
+Kitapçýk
+; Booklet
+;
+MSG_TOOLBAR_NOTES
+No_tlar
+; No_tes
+;
+MSG_MENU_VIEW_NOTES
+Notlarý göster
+; Show notes
+;
+MSG_SETTINGS_NOTES
+Belge notlarýný aç
+; Open document notes
+;
+MSG_SETTINGS_PAGEDIMS
+Sayfa boyutlarýný göster
+; Show page dimensions
+;
+MSG_MENU_VIEW_PAGEDIMS
+Sayfa boyutlarýný göster
+; Show page dimensions
+;
+MSG_MENU_SETTINGS_SNAPSHOT_DOCVIEW
+Belge Düzeni Anlýk Görüntüsünü Al
+; Snapshot Document Layout
+;
+MSG_MENU_MERGE_FILES
+Açýk Belgeleri Birleþtir
+; Merge Open Documents
+;
+MSG_MENU_SAVEPAGE
+Geçerli sayfayý Dosyaya kaydet...
+; Save current page to File...
+;
+MSG_REQ_PASSWORD_TITLE
+Belge parola korumalýdýr
+; The document is password protected
+;
+MSG_REQ_PASSWORD_ENTER
+Parola Girin:
+; Enter Password:
+;

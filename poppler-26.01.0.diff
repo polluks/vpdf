@@ -1,0 +1,2273 @@
+diff -ruN poppler.orig/config.h poppler/config.h
+--- poppler.orig/config.h     1970-01-01 01:00:00 +0100
++++ poppler/config.h    2023-5-02 22:59:19 +0200
+@@ -0,0 +1,234 @@
++/* config.h.  Generated from config.h.in by configure.  */
++/* config.h.in.  Generated from configure.ac by autoheader.  */
++
++/* Build against libcurl. */
++/* #undef ENABLE_LIBCURL */
++
++/* Use libjpeg instead of builtin jpeg decoder. */
++#define ENABLE_LIBJPEG 1
++
++/* Use libopenjpeg instead of builtin jpeg2000 decoder. */
++#define ENABLE_LIBOPENJPEG 1
++
++/* Build against libpng. */
++#define ENABLE_LIBPNG 1
++
++/* Do not hardcode the library location */
++/* #undef ENABLE_RELOCATABLE */
++
++/* Use zlib instead of builtin zlib decoder. */
++/* #undef ENABLE_ZLIB */
++
++/* Use cairo for rendering. */
++#define HAVE_CAIRO 1
++
++/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
++   */
++#define HAVE_DIRENT_H 1
++
++/* Define to 1 if you have the <dlfcn.h> header file. */
++#define HAVE_DLFCN_H 1
++
++/* Define to 1 if you have the <fcntl.h> header file. */
++#define HAVE_FCNTL_H 1
++
++/* Have FreeType2 include files */
++#define HAVE_FREETYPE_H 1
++
++/* Define to 1 if you have the `fseek64' function. */
++/* #undef HAVE_FSEEK64 */
++
++/* Define to 1 if fseeko (and presumably ftello) exists and is declared. */
++/* #undef HAVE_FSEEKO */
++
++/* Define to 1 if you have the `ftell64' function. */
++/* #undef HAVE_FTELL64 */
++
++/* Defines if gettimeofday is available on your system */
++#define HAVE_GETTIMEOFDAY 1
++
++/* Defines if gmtime_r is available on your system */
++#define HAVE_GMTIME_R 1
++
++/* Define if you have the iconv() function and it works. */
++/* #undef HAVE_ICONV */
++
++/* Define to 1 if you have the <inttypes.h> header file. */
++#define HAVE_INTTYPES_H 1
++
++/* Define to 1 if you have the `openjpeg' library (-lopenjpeg). */
++/* #undef HAVE_LIBOPENJPEG */
++
++/* Define to 1 if you have the `z' library (-lz). */
++/* #undef HAVE_LIBZ */
++
++/* Defines if localtime_r is available on your system */
++#define HAVE_LOCALTIME_R 1
++
++/* Define to 1 if you have the <memory.h> header file. */
++#define HAVE_MEMORY_H 1
++
++/* Define to 1 if you have the `mkstemp' function. */
++#define HAVE_MKSTEMP 1
++
++#define HAVE_JPX_DECODER 1
++#define HAVE_DCT_DECODER 1
++
++/* Define to 1 if you have the `mkstemps' function. */
++/* #undef HAVE_MKSTEMPS */
++
++/* Defines if strtok_r is available on your system */
++#define HAVE_STRTOK_R 1
++
++/* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
++/* #undef HAVE_NDIR_H */
++
++/* Define to 1 if you have the <openjpeg.h> header file. */
++#define HAVE_OPENJPEG_H 1
++
++/* Define to 1 if you have the `popen' function. */
++/* #undef HAVE_POPEN */
++
++/* Define if you have POSIX threads libraries and header files. */
++/* #undef HAVE_PTHREAD */
++
++/* Use splash for rendering. kiero: also used by PSOutputDev!! */
++#define HAVE_SPLASH 1
++
++/* Define to 1 if you have the <stdint.h> header file. */
++#define HAVE_STDINT_H 1
++
++/* Define to 1 if you have the <stdlib.h> header file. */
++#define HAVE_STDLIB_H 1
++
++/* Define to 1 if you have the <strings.h> header file. */
++#define HAVE_STRINGS_H 1
++
++/* Define to 1 if you have the <string.h> header file. */
++#define HAVE_STRING_H 1
++
++/* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
++   */
++/* #undef HAVE_SYS_DIR_H */
++
++/* Define to 1 if you have the <sys/mman.h> header file. */
++/* #undef HAVE_SYS_MMAN_H */
++
++/* Define to 1 if you have the <sys/ndir.h> header file, and it defines `DIR'.
++   */
++/* #undef HAVE_SYS_NDIR_H */
++
++/* Define to 1 if you have the <sys/stat.h> header file. */
++#define HAVE_SYS_STAT_H 1
++
++/* Define to 1 if you have the <sys/types.h> header file. */
++#define HAVE_SYS_TYPES_H 1
++
++/* Define to 1 if you have the <unistd.h> header file. */
++#define HAVE_UNISTD_H 1
++
++/* Define to 1 if you have the <zlib.h> header file. */
++/* #undef HAVE_ZLIB_H */
++
++/* Define as const if the declaration of iconv() needs const. */
++/* #undef ICONV_CONST */
++
++/* Define to the sub-directory in which libtool stores uninstalled libraries.
++   */
++#define LT_OBJDIR ".libs/"
++
++/* Enable multithreading support. */
++#define MULTITHREADED 1
++
++/* Generate OPI comments in PS output. */
++#define OPI_SUPPORT 1
++
++/* Name of package */
++#define PACKAGE "poppler"
++
++/* Define to the address where bug reports for this package should be sent. */
++#define PACKAGE_BUGREPORT "https://bugs.freedesktop.org/enter_bug.cgi?product=poppler"
++
++/* Define to the full name of this package. */
++#define PACKAGE_NAME "poppler"
++
++/* Define to the full name and version of this package. */
++#define PACKAGE_STRING "poppler 26.01.0"
++
++/* Define to the one symbol short name of this package. */
++#define PACKAGE_TARNAME "poppler"
++
++/* Define to the home page for this package. */
++#define PACKAGE_URL ""
++
++/* Define to the version of this package. */
++#define PACKAGE_VERSION "26.01.0"
++
++/* Poppler data dir */
++#define POPPLER_DATADIR "/usr/local/share/poppler"
++
++/* Support for curl based doc builder is compiled in. */
++/* #undef POPPLER_HAS_CURL_SUPPORT */
++
++/* Have GDK */
++/* #undef POPPLER_WITH_GDK */
++
++/* Define to necessary symbol if this constant uses a non-standard name on
++   your system. */
++/* #undef PTHREAD_CREATE_JOINABLE */
++
++/* Define to 1 if you have the ANSI C header files. */
++/* #undef STDC_HEADERS */
++
++/* Enable word list support. */
++#define TEXTOUT_WORD_LIST 1
++
++/* Defines if use cms */
++#define USE_CMS 1
++
++/* Throw exceptions to deal with not enough memory and similar problems */
++#define        USE_EXCEPTIONS 1
++
++/* Use fixed point arithmetic in the Splash backend */
++/* #undef USE_FIXEDPOINT */
++
++/* Use single precision arithmetic in the Splash backend */
++#define USE_FLOAT 1
++
++/* Version number of package */
++#define VERSION "26.01.0"
++
++/* Use fontconfig font configuration backend */
++//#define WITH_FONTCONFIGURATION_FONTCONFIG 1
++
++/* Use MorphOS font configuration backend */
++#define WITH_FONTCONFIGURATION_MORPHOS 1
++
++/* Use win32 font configuration backend */
++/* #undef WITH_FONTCONFIGURATION_WIN32 */
++
++/* Define to 1 if the X Window System is missing or not being used. */
++#define X_DISPLAY_MISSING 1
++
++#define WORDS_BIGENDIAN 1
++
++/*
++ * jpeg.h needs HAVE_BOOLEAN, when the system uses boolean in system
++ * headers and I'm too lazy to write a configure test as long as only
++ * unixware is related
++ */
++#ifdef _UNIXWARE
++#define HAVE_BOOLEAN
++#endif
++
++
++/* Number of bits in a file offset, on hosts where this is settable. */
++/* #undef _FILE_OFFSET_BITS */
++
++/* Define to 1 to make fseeko visible on some hosts (e.g. glibc 2.2). */
++/* #undef _LARGEFILE_SOURCE */
++
++/* Define for large files, on AIX-style hosts. */
++/* #undef _LARGE_FILES */
++
++#define DEFAULT_SIGNATURE_BACKEND "None"
++
+diff -ruN poppler.orig/config.mk poppler/config.mk
+--- poppler.orig/config.mk    1970-01-01 01:00:00 +0100
++++ poppler/config.mk   2025-06-07 06:30:28 +0200
+@@ -0,0 +1,17 @@
++ifeq ($(CC),cc)
++CC= ppc-morphos-gcc-11
++endif
++ifeq ($(CXX),)
++CXX= ppc-morphos-g++-11
++endif
++AS= ppc-morphos-as
++AR= ppc-morphos-ar rcs
++LD= ppc-morphos-ld
++
++# do NOT include optimization level here
++CFLAGS = -DHAVE_CONFIG_H -D_NO_PPCINLINE -D__MORPHOS_SHAREDLIBS -DHAVE_CONFIG_H -std=c++20 -Wno-write-strings -Wall -fstrength-reduce -frerun-loop-opt -fstrict-aliasing -noixemul -ffast-math -fomit-frame-pointer -mcpu=750
++CPPFLAGS = -DHAVE_CONFIG_H -D_NO_PPCINLINE -D__MORPHOS_SHAREDLIBS -DHAVE_CONFIG_H -std=c++20 -ffp-contract=fast -Wno-write-strings -Wall -ffp-contract=fast -fstrength-reduce -frerun-loop-opt -fstrict-aliasing -noixemul -ffast-math -fomit-frame-pointer -mcpu=750
++CFLAGS_LESS =  -Wall -fstrength-reduce -ffp-contract=fast -std=c++11 -frerun-loop-opt -fexpensive-optimizations -fschedule-insns2 -noixemul -ffast-math -fomit-frame-pointer -mcpu=750
++GLOBAL_INCLUDES = -I.. -I. -I../poppler -Iincludes/ -I../../../../libs/cairo/MorphOS/os-include/cairo -I../../../../libs/cairo/MorphOS/os-include \
++ -I../../../../../include  -I../../../../libs/freetype/library/include -I../../../../libs/fontconfig/MorphOS/include -I../../../../libs/freetype/include
++LFLAGS=
+diff -ruN poppler.orig/makefile poppler/makefile
+--- poppler.orig/makefile     1970-01-01 01:00:00 +0100
++++ poppler/makefile          2012-07-22 21:01:09 +0200
+@@ -0,0 +1,9 @@
++
++all: .DEFAULT
++
++.DEFAULT:
++	$(MAKE) -C fofi $(MAKECMDGOALS) -j$(shell nproc)
++	$(MAKE) -C goo $(MAKECMDGOALS) -j$(shell nproc)
++	$(MAKE) -C poppler $(MAKECMDGOALS) -j$(shell nproc)
++	$(MAKE) -C splash $(MAKECMDGOALS) -j$(shell nproc)
++
+diff -ruN poppler.orig/fofi/makefile poppler/fofi/makefile
+--- poppler.orig/fofi/makefile	1970-01-01 01:00:00 +0100
++++ poppler_cvs/fofi/makefile	2014-03-05 16:19:31 +0100
+@@ -0,0 +1,25 @@
++include ../config.mk
++
++OBJS= FoFiBase.o \
++	FoFiEncodings.o \
++	FoFiTrueType.o \
++	FoFiType1C.o \
++	FoFiType1.o  \
++	FoFiIdentifier.o
++
++TARGET = libfofi.a
++INCLUDES = -I. -I.. -I../poppler
++
++$(TARGET): $(OBJS)
++	$(AR) $(TARGET) $(OBJS)
++
++clean:
++	rm -f *.o *.a
++
++.cc.o:
++	$(CC) $(CFLAGS) -O2 $(INCLUDES) -c $*.cc
++
++.cpp.o:
++	$(CXX) $(CPPFLAGS) -O2 $(INCLUDES) -c $*.cpp
++
++
+diff -ruN poppler.orig/goo/gfile.cc poppler/goo/gfile.cc
+--- poppler-21.12.0.orig/goo/gfile.cc	2021-12-01 15:48:56 +0100
++++ poppler-21.12.0/goo/gfile.cc	2026-07-01 10:31:26 +0100
+@@ -73,7 +73,17 @@
+ template<typename Stat, typename = void_t<>>
+ struct StatMtim
+ {
+-    static const struct timespec &value(const Stat &stbuf) { return stbuf.st_mtim; }
++#ifdef __MORPHOS__
++#warning "fix this !"
++    static const struct timespec &value(const Stat& stbuf) {
++        static struct timespec ts;
++        ts.tv_sec = stbuf.st_mtime;
++        ts.tv_nsec = 0;
++        return ts;
++    }
++#else
++    static const struct timespec &value(const Stat& stbuf) { return stbuf.st_mtim; }
++#endif
+ };
+ 
+ // Mac OS X uses a different field name than POSIX and this detects it.
+@@ -92,6 +102,8 @@
+ 
+ #endif
+ 
++#undef read
++
+ //------------------------------------------------------------------------
+ 
+ GooString *appendToPath(GooString *path, const char *fileName)
+@@ -147,11 +159,11 @@
+ #endif
+ }
+ 
+-#ifndef _WIN32
++#if !defined(_WIN32)
+ 
+ static bool makeFileDescriptorCloexec(int fd)
+ {
+-#    ifdef FD_CLOEXEC
++#    if defined(FD_CLOEXEC) && !defined(__MORPHOS__)
+     int flags = fcntl(fd, F_GETFD);
+     if (flags >= 0 && !(flags & FD_CLOEXEC)) {
+         flags = fcntl(fd, F_SETFD, flags | FD_CLOEXEC);
+@@ -165,18 +177,18 @@
+ 
+ int openFileDescriptor(const char *path, int flags)
+ {
+-#    ifdef O_CLOEXEC
++#    if defined(O_CLOEXEC) && !defined(__MORPHOS__)
+     return open(path, flags | O_CLOEXEC);
+ #    else
+     int fd = open(path, flags);
+     if (fd == -1)
+         return fd;
+-
++#if !defined(__MORPHOS__)
+     if (!makeFileDescriptorCloexec(fd)) {
+         close(fd);
+         return -1;
+     }
+-
++#endif
+     return fd;
+ #    endif
+ }
+@@ -383,6 +395,58 @@
+     return modifiedTimeOnOpen.dwHighDateTime != lastModified.dwHighDateTime || modifiedTimeOnOpen.dwLowDateTime != lastModified.dwLowDateTime;
+ }
+ 
++#elif defined(__MORPHOS__)
++
++#include <proto/dos.h>
++#include <dos/dos.h>
++
++int GooFile::read(char *buf, int n, Goffset offset) const {
++  if (ftell(file) != offset)
++  {
++    fseek(file, offset, SEEK_SET);
++  }
++
++  return fread(buf, 1, n, file); 
++}
++
++Goffset GooFile::size() const {
++  return filesize;
++}
++
++std::unique_ptr<GooFile> GooFile::open(const std::string &fileName) {
++  FILE *f = fopen(fileName.c_str(), "rb");
++  
++  if (f != NULL)
++  {
++    struct FileInfoBlock fib;
++    int size = 0;
++    BPTR fh = Open(fileName.c_str(), ACCESS_READ);
++    if (fh != (BPTR)NULL)
++    {
++      ExamineFH(fh, &fib);
++      size = fib.fib_Size;
++      Close(fh);
++    }
++
++    return std::unique_ptr<GooFile>(new GooFile(f, size));
++  }
++
++  return std::unique_ptr<GooFile>();
++}
++
++bool GooFile::modificationTimeChangedSinceOpen() const
++{
++#if 1
++// don't care for now ...
++    return false;
++#else
++    struct stat statbuf;
++    fstat(fd, &statbuf);
++
++    return modifiedTimeOnOpen.tv_sec != mtim(statbuf).tv_sec || modifiedTimeOnOpen.tv_nsec != mtim(statbuf).tv_nsec;
++#endif
++}
++
+ #else
+ 
+ int GooFile::read(char *buf, int n, Goffset offset) const
+diff -ruN poppler.orig/goo/gfile.h poppler/goo/gfile.h
+--- poppler-21.12.0.orig/goo/gfile.h     2021-12-01 15:48:56 +0100
++++ poppler-21.12.0/goo/gfile.h 2026-01-07 10:36:42 +0100
+@@ -50,6 +50,9 @@
+ #        endif
+ #        include <windows.h>
+ #    endif
++#elif defined(__MORPHOS__)
++#    include <dirent.h>
++#    define NAMLEN(d) strlen((d)->d_name)
+ #else
+ #    include <unistd.h>
+ #    include <sys/types.h>
+@@ -122,6 +125,17 @@
+     GooFile(HANDLE handleA);
+     HANDLE handle;
+     struct _FILETIME modifiedTimeOnOpen;
++#elif defined(__MORPHOS__)
++
++     ~GooFile() { fclose(file); }
++    GooFile(FILE *f, int size) : file(f), filesize(size) {}
++
++    bool modificationTimeChangedSinceOpen() const;
++
++private:
++    FILE *file;
++    int  filesize;
++
+ #else
+     ~GooFile() { close(fd); }
+ 
+diff -ruN poppler.orig/goo/JpegWriter.cc poppler/goo/JpegWriter.cc
+--- poppler.orig/goo/JpegWriter.cc	2023-06-05 12:29:30 +0100
++++ poppler/goo/JpegWriter.cc	2026-01-07 11:19:28 +0200
+@@ -21,6 +21,8 @@
+ 
+ #include <limits>
+ 
++#define TRUE 1
++#define FALSE 0
+ #if ENABLE_LIBJPEG
+ 
+ #    include "poppler/Error.h"
+diff -ruN poppler.orig/goo/Makefile poppler/goo/Makefile
+--- poppler.orig/goo/Makefile	1970-01-01 01:00:00 +0100
++++ poppler/goo/Makefile	2022-06-02 02:40:28 +0200
+@@ -0,0 +1,27 @@
++include ../config.mk
++
++OBJS=  gfile.o \
++	GooTimer.o \
++	ImgWriter.o  \
++	PNGWriter.o  \
++	JpegWriter.o \
++	gstrtod.o    \
++	GooString.o  \
++	grandom.o \
++	ft_utils.o
++
++TARGET = libgoo.a
++INCLUDES = $(GLOBAL_INCLUDES) -I. -I.. -I../poppler
++
++$(TARGET): $(OBJS)
++	$(AR) $(TARGET) $(OBJS)
++
++clean:
++	rm -f *.o *.a
++
++.cc.o:
++	$(CC) $(CFLAGS) -O2 $(INCLUDES) -c $*.cc
++
++.cpp.o:
++	$(CXX) $(CPPFLAGS) -O2 $(INCLUDES) -c $*.cpp
++
+diff -ruN poppler.orig/poppler/CachedFile.h poppler/poppler/CachedFile.h
+--- poppler.orig/poppler/CachedFile.h	2015-11-15 22:05:22 +0100
++++ poppler/poppler/CachedFile.h	2026-01-07 10:32:32 +0200
+@@ -38,6 +38,8 @@
+ // needs from the CachedFileLoader.
+ //------------------------------------------------------------------------
+ 
++#undef tell
++
+ class POPPLER_PRIVATE_EXPORT CachedFile
+ {
+ 
+diff -ruN poppler.orig/poppler/DateInfo.cc poppler/poppler/DateInfo.cc
+--- poppler.orig/poppler/DateInfo.cc     2019-02-07 19:34:31 +0100
++++ poppler/poppler/DateInfo.cc	2026-01-07 10:38:55 +0100
+@@ -94,11 +94,18 @@
+ 
+     char timeOffset[12];
+ 
++#ifdef __MORPHOS__
++    const int offset = timet - (localtime_tm.tm_sec + localtime_tm.tm_min * 60 +
++                                localtime_tm.tm_hour * 3600 + localtime_tm.tm_yday * 86400 +
++                               (localtime_tm.tm_year - 70) * 31536000 + ((localtime_tm.tm_year - 69) / 4) * 86400 -
++                               ((localtime_tm.tm_year - 1) / 100) * 86400 + ((localtime_tm.tm_year + 299) / 400) * 86400);
++#else
+     // strftime "%z" does not work on windows (it prints zone name, not offset)
+     // calculate time zone offset by comparing local and gmtime time_t value for same
+     // time.
+     const time_t timeg = timegm(&localtime_tm);
+     const int offset = static_cast<int>(difftime(timeg, timet)); // find time zone offset in seconds
++#endif
+     if (offset > 0) {
+         snprintf(timeOffset, sizeof(timeOffset), "+%02d'%02d'", offset / 3600, (offset % 3600) / 60);
+     } else if (offset < 0) {
+@@ -138,6 +145,10 @@
+     struct tm tm;
+     time_t time;
+ 
++#ifdef __MORPHOS__
++	#warning Reimplement -- kiero
++	return -1;
++#else
+     if (!parseDateString(dateString, &year, &mon, &day, &hour, &min, &sec, &tz, &tz_hour, &tz_minute)) {
+         return -1;
+     }
+@@ -165,4 +176,5 @@
+     time -= offset;
+ 
+     return time;
++#endif
+ }
+diff -ruN poppler.orig/poppler/DCTStream.cc poppler/poppler/DCTStream.cc
+--- poppler.orig/poppler/DCTStream.cc	2017-06-17 18:35:25 +0200
++++ poppler/poppler/DCTStream.cc	2026-01-07 10:35:15 +0200
+@@ -25,24 +25,42 @@
+
+ static boolean str_fill_input_buffer(j_decompress_ptr cinfo)
+ {
+-    int c;
++    int cnt = 0;
++
+     struct str_src_mgr *src = (struct str_src_mgr *)cinfo->src;
++    JOCTET* buffer = src->buffer;
++
+     if (src->index == 0) {
+-        c = 0xFF;
++        buffer[0] = 0xFF;
++        cnt = 1;
+         src->index++;
+     } else if (src->index == 1) {
+-        c = 0xD8;
++        buffer[0] = 0xD8;
++        cnt = 1;
+         src->index++;
+     } else {
+-        c = src->str->getChar();
++        for(int i=0; i<sizeof(src->buffer); i++)
++        {
++            int c = src->str->getChar();
++            if (c == EOF)
++            {
++              break;
++            }
++            buffer[i] = c;
++            cnt++;
++        }
+     }
+-    src->buffer = c;
+-    src->pub.next_input_byte = &src->buffer;
+-    src->pub.bytes_in_buffer = 1;
+-    if (c != EOF) {
+-        return TRUE;
+-    } else {
++
++    if (cnt > 0)
++    {
++        src->pub.next_input_byte = (const JOCTET*)buffer;
++        src->pub.bytes_in_buffer = cnt;
++    }
++
++    if (cnt == 0) {
+         return FALSE;
++    } else {
++        return TRUE;
+     }
+ }
+ 
+diff -ruN poppler.orig/poppler/DCTStream.h poppler/poppler/DCTStream.h
+--- poppler.orig/poppler/DCTStream.h	2017-06-17 18:35:25 +0200
++++ poppler/poppler/DCTStream.h	2026-01-07 10:29:15 +0200
+@@ -32,7 +32,7 @@
+ struct str_src_mgr
+ {
+     struct jpeg_source_mgr pub;
+-    JOCTET buffer;
++    JOCTET buffer[4096];
+     Stream *str;
+     int index;
+ };
+diff -ruN poppler.orig/poppler/Dict.cc poppler/poppler/Dict.cc
+--- poppler.orig/poppler/Dict.cc	2017-06-17 18:35:25 +0200
++++ poppler/poppler/Dict.cc	2025-12-03 06:15:29 +0200
+@@ -33,6 +33,37 @@
+ 
+ #include <config.h>
+ 
++
++// this is to unfuck includes. maybe fix one day -- kiero
++namespace std {
++	int rand();
++	// more c++ fun starting with libpoppler 0.65 -- cyfm 2018/9/20
++	long  strtol(const char *, char **, int);
++	float    strtof (const char *, char **);
++	double  strtod(const char *, char **);
++	long strtold (const char *, char **);
++	long long  strtoll(const char *, char **, int);
++	long strtoull(const char *, char **, int);
++	long strtoul(const char *, char **, int);
++	// actually defined in gmem.h but still needed here -- cyfm 2018/9/24
++	void *malloc(int size);
++	void *realloc(void *ptr,int size);
++	void free(void *ptr);
++	void abort(void);
++};
++
++extern "C"
++{
++	void abort();
++}
++
++#define _GLIBCXX_CSTDLIB 1
++#define _GLIBCXX_STDLIB_H 1 /* fm: for GCC7/8 */
++/* workaround missing RAND_MAX needed by <algorithm> for latest GCC versions - Piru */
++#if __GNUC__ > 11 && !defined(RAND_MAX)
++#define RAND_MAX  0x7fffffff
++#endif
++
+ #include <algorithm>
+ #include <ranges>
+
+diff -ruN poppler.orig/poppler/GfxState.cc poppler/poppler/GfxState.cc
+--- poppler.orig/poppler/GfxState.cc     2019-02-07 19:34:09 +0200
++++ poppler/poppler/GfxState.cc 2026-01-07 10:31:43 +0200
+@@ -49,6 +49,19 @@
+
+ #include <config.h>
+
++
++extern "C" {
++       void exit(int ec);
++       void quick_exit(int rc);
++       int at_quick_exit(void (*)(void));
++};
++
++//#define _GLIBCXX_CSTDLIB 1
++
++//#define _GLIBCXX_CLOCALE 1
++//#define _GLIBCXX_CXX_LOCALE_H 1
++
++
+ #include <algorithm>
+ #include <memory>
+ #include <cstddef>
+diff -ruN poppler.orig/poppler/GfxState.h poppler/poppler/GfxState.h
+--- poppler.orig/poppler/GfxState.h	2019-01-07 22:15:21 +0200
++++ poppler/poppler/GfxState.h	2025-09-04 14:22:16 +0200
+@@ -42,9 +42,11 @@
+ #include "poppler-config.h"
+ #include "poppler_private_export.h"
+ 
++// NOTE: this is to unfuck includes. maybe fix one day -- kiero
+ #include "Object.h"
+ #include "Function.h"
+-
++#include <clocale>
++#include <ctime>
+ #include <array>
+ #include <cassert>
+ #include <map>
+@@ -220,6 +222,12 @@
+     csDeviceRGBA // used for transparent JPX images, they contain RGBA data · Issue #1486
+ };
+ 
++extern "C" {
++
++	extern int __morphos_global_disable_cms;
++
++};
++
+ // This shall hold a cmsHPROFILE handle.
+ // Only use the make_GfxLCMSProfilePtr function to construct this pointer,
+ // to ensure that the resources are properly released after usage.
+@@ -241,7 +249,7 @@
+     GfxColorTransform &operator=(const GfxColorTransform &) = delete;
+     int getIntent() const { return cmsIntent; }
+     int getInputPixelType() const { return inputPixelType; }
+-    int getTransformPixelType() const { return transformPixelType; }
++    int getTransformPixelType() const { return __morphos_global_disable_cms ? -1 : transformPixelType; }
+ 
+ private:
+     GfxColorTransform() = default;
+diff -ruN poppler.orig/poppler/GlobalParams.cc poppler/poppler/GlobalParams.cc
+--- poppler.orig/poppler/GlobalParams.cc	2023-07-03 23:16:50 +0200
++++ poppler-22.12.0/poppler/GlobalParams.cc	2026-01-07 11:13:17 +0200
+@@ -255,7 +255,7 @@
+ #ifdef _WIN32
+     void scanWindowsFonts(const std::string &winFontDir);
+ #endif
+-#if WITH_FONTCONFIGURATION_FONTCONFIG
++#if WITH_FONTCONFIGURATION_FONTCONFIG || defined(__MORPHOS__)
+     void addFcFont(SysFontInfo *si) { fonts.push_back(si); }
+ #endif
+ private:
+@@ -420,6 +420,7 @@
+     printCommands = false;
+     profileCommands = false;
+     errQuiet = false;
++    fontcache = NULL;
+ 
+     cidToUnicodeCache = std::make_unique<CharCodeToUnicodeCache>(cidToUnicodeCacheSize);
+     unicodeToUnicodeCache = std::make_unique<CharCodeToUnicodeCache>(unicodeToUnicodeCacheSize);
+@@ -1304,6 +1305,31 @@
+     return {};
+ }
+ 
++#elif defined(__MORPHOS__)
++  #include "GlobalParamsMorphOS.cc"                                                                                                                           
++std::optional<std::string> GlobalParams::findBase14FontFile(const GooString *base14Name, const GfxFont &font, GooString * /*substituteFontName*/) 
++{
++
++	SysFontType type;                                                                              
++	int fontNum;                 
++                          
++	return findSystemFontFile(font, &type, &fontNum, NULL, base14Name);        
++}      
++
++FamilyStyleFontSearchResult GlobalParams::findSystemFontFileForFamilyAndStyle(const std::string &fontFamily, const std::string &fontStyle, const std::vector<std::string> &filesToIgnore)
++{
++    error(errUnimplemented, -1, "GlobalParams::findSystemFontFileForFamilyAndStyle not implemented for this platform");
++    return {};
++}
++
++UCharFontSearchResult GlobalParams::findSystemFontFileForUChar(Unicode uChar, const GfxFont &fontToEmulate)
++{
++    error(errUnimplemented, -1, "GlobalParams::findSystemFontFileForUChar not implemented for this platform");
++    return {};
++}
++
++///
++
+ #elif WITH_FONTCONFIGURATION_WIN32
+ #    include "GlobalParamsWin.cc"
+ 
+diff -ruN poppler.orig/poppler/GlobalParams.h  poppler/poppler/GlobalParams.h
+--- poppler.orig/poppler/GlobalParams.h  2019-04-21 11:46:25 +0200
++++ poppler/poppler/GlobalParams.h       2026-01-07 10:34:18 +0200
+@@ -112,7 +112,8 @@
+ class POPPLER_PRIVATE_EXPORT GlobalParams
+ {
+ public:
+-    // Initialize the global parameters
++    // Initialize the global parameters by attempting to read a config
++    // file.
+     explicit GlobalParams(const std::string &customPopplerDataDir = {});
+
+     ~GlobalParams();
+@@ -225,6 +226,7 @@
+     mutable std::recursive_mutex cMapCacheMutex;
+
+     std::string popplerDataDir;
++    void *fontcache;            // opaque pointer to font cache context
+ };
+
+ class POPPLER_PRIVATE_EXPORT GlobalParamsIniter
+diff -ruN poppler.orig/poppler/GlobalParamsMorphOS.cc poppler/poppler/GlobalParamsMorphOS.cc
+--- poppler.orig/poppler/GlobalParamsMorphOS.cc	1970-01-01 01:00:00 +0100
++++ poppler-25.07.0/poppler/GlobalParamsMorphOS.cc	2025-10-15 05:04:38 +0200
+@@ -0,0 +1,656 @@
++/* Written by Michal 'kiero' Wozniak (wozniak_m@interia.pl)
++*/
++
++#ifndef PACKAGE_NAME
++#include <config.h>
++#endif
++
++#ifdef USE_GCC_PRAGMAS
++#pragma implementation
++#endif
++
++#include <string.h>
++#include <stdio.h>
++#include <ctype.h>
++#include <assert.h>
++
++#include "goo/gmem.h"
++#include "goo/GooString.h"
++#include "goo/gfile.h"
++#include "Error.h"
++#include "NameToCharCode.h"
++#include "CharCodeToUnicode.h"
++#include "UnicodeMap.h"
++#include "CMap.h"
++#include "FontEncodingTables.h"
++#include "GlobalParams.h"
++#include "GfxFont.h"
++#define DOS_DOSEXTENS_H	// avoid including dosextens.h as libpoppler >= 25.07.0 has its own ErrorString
++#include <dos/dosextens.h>
++#include <clib/debug_protos.h>
++#include <clib/exec_protos.h>
++#include "../../fontcache.h"
++
++#define DEFAULT_SUBSTITUTE_FONT "Helvetica"
++
++#define globalParamsLocker()	std::unique_lock<std::recursive_mutex> locker(mutex)
++#define unicodeMapCacheLocker()	std::unique_lock<std::recursive_mutex> locker(unicodeMapCacheMutex)
++#define cMapCacheLocker()	std::unique_lock<std::recursive_mutex> locker(cMapCacheMutex)
++
++static struct {
++    char *name;
++    char *t1FileName;
++    char *ttFileName;
++} displayFontTab[] = {
++    {"Courier",               "n022003l.pfb", "cour.ttf"},
++    {"Courier-Bold",          "n022004l.pfb", "courbd.ttf"},
++    {"Courier-BoldOblique",   "n022024l.pfb", "courbi.ttf"},
++    {"Courier-Oblique",       "n022023l.pfb", "couri.ttf"},
++    {"Helvetica",             "n019003l.pfb", "arial.ttf"},
++    {"Helvetica-Bold",        "n019004l.pfb", "arialbd.ttf"},
++    {"Helvetica-BoldOblique", "n019024l.pfb", "arialbi.ttf"},
++    {"Helvetica-Oblique",     "n019023l.pfb", "ariali.ttf"},
++    // TODO: not sure if "symbol.ttf" is right
++    {"Symbol",                "s050000l.pfb", "symbol.ttf"},
++    {"Times-Bold",            "n021004l.pfb", "timesbd.ttf"},
++    {"Times-BoldItalic",      "n021024l.pfb", "timesbi.ttf"},
++    {"Times-Italic",          "n021023l.pfb", "timesi.ttf"},
++    {"Times-Roman",           "n021003l.pfb", "times.ttf"},
++    // TODO: not sure if "wingding.ttf" is right
++    {"ZapfDingbats",          "d050000l.pfb", "wingding.ttf"},
++
++    // those seem to be frequently accessed by PDF files and I kind of guess
++    // which font file do the refer to
++    {"Palatino", NULL, "pala.ttf"},
++    {"Palatino-Roman", NULL, "pala.ttf"},
++    {"Palatino-Bold", NULL, "palab.ttf"},
++    {"Palatino-Italic", NULL, "palai.ttf"},
++    {"Palatino,Italic", NULL, "palai.ttf"},
++    {"Palatino-BoldItalic", NULL, "palabi.ttf"},
++
++    {"ArialBlack",        NULL, "arialbd.ttf"},
++
++    {"ArialNarrow", NULL, "arialn.ttf"},
++    {"ArialNarrow,Bold", NULL, "arialnb.ttf"},
++    {"ArialNarrow,Italic", NULL, "arialni.ttf"},
++    {"ArialNarrow,BoldItalic", NULL, "arialnbi.ttf"},
++    {"ArialNarrow-Bold", NULL, "arialnb.ttf"},
++    {"ArialNarrow-Italic", NULL, "arialni.ttf"},
++    {"ArialNarrow-BoldItalic", NULL, "arialnbi.ttf"},
++
++    {"HelveticaNarrow", NULL, "arialn.ttf"},
++    {"HelveticaNarrow,Bold", NULL, "arialnb.ttf"},
++    {"HelveticaNarrow,Italic", NULL, "arialni.ttf"},
++    {"HelveticaNarrow,BoldItalic", NULL, "arialnbi.ttf"},
++    {"HelveticaNarrow-Bold", NULL, "arialnb.ttf"},
++    {"HelveticaNarrow-Italic", NULL, "arialni.ttf"},
++    {"HelveticaNarrow-BoldItalic", NULL, "arialnbi.ttf"},
++
++    {"BookAntiqua", NULL, "bkant.ttf"},
++    {"BookAntiqua,Bold", NULL, "bkant.ttf"},
++    {"BookAntiqua,Italic", NULL, "bkant.ttf"},
++    {"BookAntiqua,BoldItalic", NULL, "bkant.ttf"},
++    {"BookAntiqua-Bold", NULL, "bkant.ttf"},
++    {"BookAntiqua-Italic", NULL, "bkant.ttf"},
++    {"BookAntiqua-BoldItalic", NULL, "bkant.ttf"},
++
++    {"Verdana", NULL, "verdana.ttf"},
++    {"Verdana,Bold", NULL, "verdanab.ttf"},
++    {"Verdana,Italic", NULL, "verdanai.ttf"},
++    {"Verdana,BoldItalic", NULL, "verdanaz.ttf"},
++    {"Verdana-Bold", NULL, "verdanab.ttf"},
++    {"Verdana-Italic", NULL, "verdanai.ttf"},
++    {"Verdana-BoldItalic", NULL, "verdanaz.ttf"},
++
++    {"Tahoma", NULL, "tahoma.ttf"},
++    {"Tahoma,Bold", NULL, "tahomabd.ttf"},
++    {"Tahoma,Italic", NULL, "tahoma.ttf"},
++    {"Tahoma,BoldItalic", NULL, "tahomabd.ttf"},
++    {"Tahoma-Bold", NULL, "tahomabd.ttf"},
++    {"Tahoma-Italic", NULL, "tahoma.ttf"},
++    {"Tahoma-BoldItalic", NULL, "tahomabd.ttf"},
++
++    {"CCRIKH+Verdana", NULL, "verdana.ttf"},
++    {"CCRIKH+Verdana,Bold", NULL, "verdanab.ttf"},
++    {"CCRIKH+Verdana,Italic", NULL, "verdanai.ttf"},
++    {"CCRIKH+Verdana,BoldItalic", NULL, "verdanaz.ttf"},
++    {"CCRIKH+Verdana-Bold", NULL, "verdanab.ttf"},
++    {"CCRIKH+Verdana-Italic", NULL, "verdanai.ttf"},
++    {"CCRIKH+Verdana-BoldItalic", NULL, "verdanaz.ttf"},
++
++    {"Georgia", NULL, "georgia.ttf"},
++    {"Georgia,Bold", NULL, "georgiab.ttf"},
++    {"Georgia,Italic", NULL, "georgiai.ttf"},
++    {"Georgia,BoldItalic", NULL, "georgiaz.ttf"},
++    {"Georgia-Bold", NULL, "georgiab.ttf"},
++    {"Georgia-Italic", NULL, "georgiai.ttf"},
++    {"Georgia-BoldItalic", NULL, "georgiaz.ttf"},
++
++    {NULL}
++};
++
++#define FONTS_SUBDIR "FONTS:"	// TODO: make sure to scan all directories belonging to an assign
++
++static bool FileExists(const char *path)
++{
++    FILE *f = fopen(path, "rb");
++    if (f)
++		fclose(f);
++    return f != NULL;
++    
++}
++
++/* no need to do this on MorphOS */
++
++void GlobalParams::setupBaseFonts(const char * dir)
++{
++}
++
++#if 1
++typedef long BPTR;	/* as we don't including dosextens.h witj libpoppler >= 25.07.0, we need to define some stuff*/
++#pragma pack(2)
++struct Process
++{
++	struct Task      pr_Task;
++	struct MsgPort   pr_MsgPort;
++	WORD             pr_Pad;
++	BPTR             pr_SegList;
++	LONG             pr_StackSize;
++	APTR             pr_GlobVec;
++	LONG             pr_TaskNum;
++	BPTR             pr_StackBase;
++	LONG             pr_Result2;
++	BPTR             pr_CurrentDir;
++	BPTR             pr_CIS;
++	BPTR             pr_COS;
++	APTR             pr_ConsoleTask;
++	APTR             pr_FileSystemTask;
++	BPTR             pr_CLI;
++	APTR             pr_ReturnAddr;
++	APTR             pr_PktWait;
++	APTR             pr_WindowPtr;
++
++	BPTR             pr_HomeDir;
++	LONG             pr_Flags;
++	VOID           (*pr_ExitCode)(VOID);
++	LONG             pr_ExitData;
++	STRPTR           pr_Arguments;
++	struct MinList   pr_LocalVars;
++	ULONG            pr_ShellPrivate;
++	BPTR             pr_CES;
++};
++#pragma pack()
++#endif
++static struct fontcache *setupFontCache()
++{
++	char *fonts[] = {"sys:fonts", "mossys:fonts", "PROGDIR:fonts", NULL};
++	struct fontcache *fontcache;
++	int isnew = FALSE;
++
++	struct Process *process = (struct Process*)FindTask(NULL);
++	struct Window *oldWindowPtr = (struct Window*)process->pr_WindowPtr;
++	process->pr_WindowPtr = (struct Window*)-1;
++		
++	fontcache = fcLoad("PROGDIR:vpdf.fontcache");
++	//kprintf("checking progdir. %p\n", fontcache);
++	if (fontcache == NULL)
++	{
++		/* retry from T: in case we had PROGDIR write protected */
++		fontcache = fcLoad("T:vpdf.fontcache");
++		//kprintf("checking t. %p\n", fontcache);
++		if (fontcache == NULL)
++		{
++			isnew = TRUE;
++			fontcache = fcCreate(fonts);
++		}
++    }
++    
++    /* add builtin substitutions to the cache */
++    
++    if (fontcache != NULL)	
++    {
++    	int i = 0;
++		while(displayFontTab[i].name != NULL)
++		{
++			struct fontpattern *pat = fcPatternAlloc();
++			if (pat != NULL)
++			{
++				char *name = displayFontTab[i].name;
++				char family[128];
++				char path[512];
++				int j;
++				int exists = FALSE;
++				
++				strcpy(family, name);
++				if (strstr(family, ","))
++					*strstr(family, ",") = '\0';
++				if (strstr(family, "-"))
++					*strstr(family, "-") = '\0';
++			
++				fcPatternAddString(pat, FC_FAMILY, family);
++				fcPatternAddString(pat, FC_FULLNAME, name);
++				
++				j=0; 
++				while(fonts[j] != NULL)
++				{
++					if (displayFontTab[i].t1FileName != NULL)
++					{
++						snprintf(path, sizeof(path), "%s/%s", fonts[j], displayFontTab[i].t1FileName);
++						if (FileExists(path))
++						{
++							fcPatternAddString(pat, FC_FILE, path);
++							exists = TRUE;
++						}
++					}
++					if (displayFontTab[i].ttFileName != NULL)
++					{
++						snprintf(path, sizeof(path), "%s/%s", fonts[j], displayFontTab[i].ttFileName);
++						if (FileExists(path))
++						{
++							fcPatternAddString(pat, FC_FILE, path);
++							exists = TRUE;
++						}
++					}
++					j++;
++				}
++					
++				if (strstr(name, "Italic"))
++					fcPatternAddInteger(pat, FC_SLANT, FC_SLANT_ITALIC);
++				if (strstr(name, "Roman"))
++					fcPatternAddInteger(pat, FC_SLANT, FC_SLANT_ROMAN);
++				if (strstr(name, "Bold"))
++					fcPatternAddInteger(pat, FC_WEIGHT, FC_WEIGHT_BOLD);
++				else
++					fcPatternAddInteger(pat, FC_WEIGHT, FC_WEIGHT_REGULAR);
++					
++				if (exists)
++					fcAddPattern(fontcache, pat);
++				else
++					fcPatternDestroy(pat);
++			}
++			
++			i++;
++		}
++		
++		if (isnew)
++		{
++			/* save cache. main dir is PROGDIR: but when it fails (write protected?) try T: */
++			if (fcSave(fontcache, "PROGDIR:vpdf.fontcache") == FALSE)
++			{
++				fcSave(fontcache, "T:vpdf.fontcache");
++			}
++		}
++    }
++    
++    //kprintf("fontcache loaded to %p\n", fontcache);
++    
++    process->pr_WindowPtr = oldWindowPtr;
++    
++    /* TODO: handle some substitution rules here? */
++    
++    return fontcache;
++}
++
++static bool findModifier(const char *name, const char *modifier, const char **start)
++{
++	const char *match;
++
++	if (name == NULL)
++		return false;
++
++	match = strstr(name, modifier);
++	if (match)
++	{
++		if (*start == NULL || match < *start)
++			*start = match;
++		return true;
++	}
++	else
++	{
++		return false;
++	}
++}
++
++static struct fontpattern *buildFcPattern(struct fontpattern *p, const GfxFont *font, GooString *base14Name)
++{
++	int weight = -1,
++		slant = -1,
++		width = -1;
++		
++	bool deleteFamily = false;
++	char *family, *name, *lang, *modifiers;
++	const char *start;
++	
++	// this is all heuristics will be overwritten if font had proper info
++	name = base14Name != NULL ? (char *)base14Name->c_str() : (char *)font->getName()->c_str();
++	//printf("  building font substitution for font:%s, family:%s, serif:%d, symbolic:%d\n", name, font->getFamily()->c_str(), font->isSerif(), font->isSymbolic());
++
++	modifiers = strchr (name, ',');
++	if (modifiers == NULL)
++		modifiers = strchr (name, '-');
++
++	// remove the - from the names, for some reason, Fontconfig does not understand "MS-Mincho" but does with "MS Mincho"
++	int len = strlen(name);
++	for (int i = 0; i < len; i++)
++		name[i] = (name[i] == '-' ? ' ' : name[i]);
++
++	start = NULL;
++	findModifier(modifiers, "Regular", &start);
++	findModifier(modifiers, "Roman", &start);
++
++	if (findModifier(modifiers, "Oblique", &start))
++		slant = FC_SLANT_OBLIQUE;
++	if (findModifier(modifiers, "Italic", &start))
++		slant = FC_SLANT_ITALIC;
++	if (findModifier(modifiers, "Bold", &start))
++		weight = FC_WEIGHT_BOLD;
++	if (findModifier(modifiers, "Light", &start))
++		weight = FC_WEIGHT_LIGHT;
++	if (findModifier(modifiers, "Condensed", &start))
++		width = FC_WIDTH_CONDENSED;
++
++	if (start)
++	{
++		// There have been "modifiers" in the name, crop them to obtain the family name
++		family = new char[len+1];
++		strcpy(family, name);
++		int pos = (modifiers - name);
++		family[pos] = '\0';
++		deleteFamily = true;
++	}
++	else
++	{
++		family = name;
++	}
++
++	//printf("   family: %s\n", family != NULL ? family : "no family");
++
++	// use font flags
++	if (font->isBold())
++		weight = FC_WEIGHT_BOLD;
++	if (font->isItalic())
++		slant = FC_SLANT_ITALIC;
++
++	// if the FontDescriptor specified a family name use it
++	if (font->getFamily()) {
++		if (deleteFamily)
++		{
++			delete[] family;
++			deleteFamily = false;
++		}
++		family = (char *)font->getFamily()->c_str();
++	}
++
++	// if the FontDescriptor specified a weight use it
++	switch (font -> getWeight())
++	{
++		case GfxFont::W100: weight = FC_WEIGHT_EXTRALIGHT; break; 
++		case GfxFont::W200: weight = FC_WEIGHT_LIGHT; break; 
++		case GfxFont::W300: weight = FC_WEIGHT_BOOK; break; 
++		case GfxFont::W400: weight = FC_WEIGHT_NORMAL; break; 
++		case GfxFont::W500: weight = FC_WEIGHT_MEDIUM; break; 
++		case GfxFont::W600: weight = FC_WEIGHT_DEMIBOLD; break; 
++		case GfxFont::W700: weight = FC_WEIGHT_BOLD; break; 
++		case GfxFont::W800: weight = FC_WEIGHT_EXTRABOLD; break; 
++		case GfxFont::W900: weight = FC_WEIGHT_BLACK; break; 
++		default: break; 
++	}
++
++	// if the FontDescriptor specified a width use it
++	switch (font -> getStretch())
++	{
++		case GfxFont::UltraCondensed: width = FC_WIDTH_ULTRACONDENSED; break; 
++		case GfxFont::ExtraCondensed: width = FC_WIDTH_EXTRACONDENSED; break; 
++		case GfxFont::Condensed: width = FC_WIDTH_CONDENSED; break; 
++		case GfxFont::SemiCondensed: width = FC_WIDTH_SEMICONDENSED; break; 
++		case GfxFont::Normal: width = FC_WIDTH_NORMAL; break; 
++		case GfxFont::SemiExpanded: width = FC_WIDTH_SEMIEXPANDED; break; 
++		case GfxFont::Expanded: width = FC_WIDTH_EXPANDED; break; 
++		case GfxFont::ExtraExpanded: width = FC_WIDTH_EXTRAEXPANDED; break; 
++		case GfxFont::UltraExpanded: width = FC_WIDTH_ULTRAEXPANDED; break; 
++		default: break; 
++	}
++
++	// find the language we want the font to support
++	if (font->isCIDFont())
++	{
++		GooString *collection = (GooString *)((GfxCIDFont *)font)->getCollection();
++		if (collection)
++		{
++			if (strcmp(collection->c_str(), "Adobe-GB1") == 0)
++				lang = "zh-cn"; // Simplified Chinese
++			else if (strcmp(collection->c_str(), "Adobe-CNS1") == 0)
++				lang = "zh-tw"; // Traditional Chinese
++			else if (strcmp(collection->c_str(), "Adobe-Japan1") == 0)
++				lang = "ja"; // Japanese
++			else if (strcmp(collection->c_str(), "Adobe-Japan2") == 0)
++				lang = "ja"; // Japanese
++			else if (strcmp(collection->c_str(), "Adobe-Korea1") == 0)
++				lang = "ko"; // Korean
++			else if (strcmp(collection->c_str(), "Adobe-UCS") == 0)
++				lang = "xx";
++			else if (strcmp(collection->c_str(), "Adobe-Identity") == 0)
++				lang = "xx";
++			else
++			{
++				error(errInternal, -1, "Unknown CID font collection, please report to poppler bugzilla.");
++				lang = "xx";
++			}
++		}
++		else
++			lang = "xx";
++	}
++	else
++		lang = "xx";
++
++	fcPatternAddString(p, FC_FAMILY, family);
++	fcPatternAddString(p, FC_LANG, lang);
++
++	if (weight != -1)
++		fcPatternAddInteger(p, FC_WEIGHT, weight);
++	else if (!font->isBold())
++		fcPatternAddInteger(p, FC_WEIGHT, FC_WEIGHT_NORMAL);
++		
++	if (width != -1) fcPatternAddInteger(p, FC_WIDTH, width);
++	
++	if (slant != -1)
++		fcPatternAddInteger(p, FC_SLANT, slant);
++	else if (!font->isItalic())
++		fcPatternAddExcludingInteger(p, FC_SLANT, FC_SLANT_ITALIC);
++	
++	if (font->isFixedWidth())
++		fcPatternAddInteger(p, FC_SPACING, FC_MONO);
++	else 
++		fcPatternAddExcludingInteger(p, FC_SPACING, FC_MONO);
++		
++	if (font->isSerif())
++		fcPatternAddInteger(p, FC_SERIF, TRUE);
++	else
++		fcPatternAddExcludingInteger(p, FC_SERIF, TRUE);
++	
++	if (deleteFamily)
++		delete[] family;
++		
++	return p;
++}
++
++std::optional<std::string> GlobalParams::findSystemFontFile(const GfxFont &font,
++					  SysFontType *type,
++					  int *fontNum, GooString *substituteFontName, const GooString *base14Name)
++{
++	const SysFontInfo *fi = NULL;
++	fontpattern *p = NULL;
++	std::optional<std::string> path;
++	GooString substituteName;
++	const std::optional<std::string> &fontName = font.getName();
++	const std::optional<std::string> &lookupName = base14Name != nullptr ? base14Name->c_str() : font.getName();
++	if (!fontName) return nullptr;
++		
++	globalParamsLocker();
++	
++	if (fontcache == NULL)
++	{
++		//kprintf("setup font cache...\n");
++		fontcache = setupFontCache();
++	}
++
++	//kprintf("font lookup :%s:%s:%s\n", fontName->c_str(), substituteFontName != NULL ? substituteFontName->c_str() : "nosubst", base14Name != NULL ? base14Name->c_str() : "nobase14");
++
++	if ((fi = sysFonts->find(*lookupName, font.isFixedWidth(), true)))
++	{
++		path = fi->path->toStr();
++		*type = fi->type;
++		*fontNum = fi->fontNum;
++		substituteName.Set(fi->substituteName->c_str());
++	}
++	else
++	{
++		char *s, *s2;
++		char *ext;
++		struct fontpattern *match;
++		int matchingcriteria[FC_LAST_CRITERIA];
++		
++		p = fcPatternAlloc();
++		buildFcPattern(p, &font, (GooString*)base14Name);
++		
++		if (p == NULL)
++			goto fin;
++
++		match = fcMatch((struct fontcache*)fontcache, p, matchingcriteria);
++		// if we have a match but it is a shitty one (no filename, no family)
++		// then pick one of the builtins
++		if (matchingcriteria[FC_FAMILY] == FALSE &&
++			matchingcriteria[FC_FILE] == FALSE &&
++			matchingcriteria[FC_FULLNAME] == FALSE)
++		{
++		
++			//s = fcPatternGetString(match, FC_FILE, 0);
++			//s2 = fcPatternGetString(match, FC_FULLNAME, 0);
++			//kprintf("shitty mached one:%s:%s, retry\n", s, s2);
++			
++			if (font.isFixedWidth())
++				fcPatternAddString(p, FC_FAMILY, "Courier");
++			else
++				fcPatternAddString(p, FC_FAMILY, "Times");
++				
++			match = fcMatch((struct fontcache*)fontcache, p, matchingcriteria);
++		}
++		
++		if (match != NULL) /* TODO: think what to do in this case */
++		{
++			s = fcPatternGetString(match, FC_FILE, 0);
++			s2 = fcPatternGetString(match, FC_FULLNAME, 0);
++			
++			//kprintf("mached one:%s:%s\n", s, s2);
++			
++			ext = strrchr(s, '.');
++			
++			if (s2 != NULL)
++				substituteName.Set((char*)s2);
++			else
++			{
++				// fontconfig does not extract fullname for some fonts
++				// create the fullname from family and style
++				s2 = fcPatternGetString(match, FC_FAMILY, 0);
++				if (s2 != NULL)
++				{
++					substituteName.Set((char*)s2);
++					s2 = fcPatternGetString(match, FC_STYLE, 0);
++					if (s2 != NULL)
++					{
++						GooString *style = new GooString((char*)s2);
++						if (style->cmp("Regular") != 0)
++						{
++							substituteName.append(" ");
++							substituteName.append(style);
++						}
++						delete style;
++					}
++				}
++			}
++
++			if (ext == NULL)
++				goto fin; /* TODO: ok, this is silly and shouldn't happen i guess */
++				
++			if (!strncasecmp(ext,".ttf",4) || !strncasecmp(ext, ".ttc", 4))
++			{
++				int weight, slant;
++				bool bold = font.isBold();
++				bool italic = font.isItalic();
++				bool oblique = false;
++
++				weight = fcPatternGetInteger(match, FC_WEIGHT, 0);
++				slant = fcPatternGetInteger(match, FC_SLANT, 0);
++
++				if (weight == FC_WEIGHT_DEMIBOLD || weight == FC_WEIGHT_BOLD
++				    || weight == FC_WEIGHT_EXTRABOLD || weight == FC_WEIGHT_BLACK)
++				{
++					bold = true;
++				}
++				if (slant == FC_SLANT_ITALIC)
++					italic = true;
++				if (slant == FC_SLANT_OBLIQUE)
++					oblique = true;
++
++				*fontNum = 0;
++				*type = (!strncasecmp(ext,".ttc",4)) ? sysFontTTC : sysFontTTF;
++				*fontNum = fcPatternGetInteger(match, FC_INDEX, 0);
++
++				fi = new SysFontInfo(std::make_unique<GooString>(*fontName), bold, italic, oblique, font.isFixedWidth(), std::make_unique<GooString>((char *)s), *type, *fontNum, substituteName.copy());
++				sysFonts->addFcFont((SysFontInfo *)fi);
++				path = std::string((char *)s);
++			}
++			else if (!strncasecmp(ext,".pfa",4) || !strncasecmp(ext,".pfb",4)) 
++			{
++				int weight, slant;
++				bool bold = font.isBold();
++				bool italic = font.isItalic();
++				bool oblique = false;
++
++				weight = fcPatternGetInteger(match, FC_WEIGHT, 0);
++				slant = fcPatternGetInteger(match, FC_SLANT, 0);
++
++				if (weight == FC_WEIGHT_DEMIBOLD || weight == FC_WEIGHT_BOLD
++				    || weight == FC_WEIGHT_EXTRABOLD || weight == FC_WEIGHT_BLACK)
++				{
++				  bold = true;
++				}
++				if (slant == FC_SLANT_ITALIC)
++					italic = true;
++				if (slant == FC_SLANT_OBLIQUE)
++					oblique = true;
++
++				*type = (!strncasecmp(ext,".pfa",4)) ? sysFontPFA : sysFontPFB;
++				*fontNum = fcPatternGetInteger(match, FC_INDEX, 0);
++				fi = new SysFontInfo(std::make_unique<GooString>(*fontName), bold, italic, oblique, font.isFixedWidth(), std::make_unique<GooString>((char *)s), *type, *fontNum, substituteName.copy());
++
++				sysFonts->addFcFont((SysFontInfo *)fi);
++				path = std::string((char *)s);
++			}
++			else /* can there be anything else? */
++			{
++				printf("******Fontcache:unknown font name extension:%s\n", s);
++			}
++		}
++	}
++
++	if (!path && (fi = sysFonts->find(*fontName, font.isFixedWidth(), false)))
++	{
++		path = fi->path->toStr();
++		*type = fi->type;
++		*fontNum = fi->fontNum;
++	}
++
++	if (substituteFontName)
++	{
++		substituteFontName->Set(substituteName.c_str());
++	}
++
++	fin:
++
++	if (p)
++		fcPatternDestroy(p);
++
++	return path;
++    
++}
++
+diff -ruN poppler.orig/goo/gmem.h   poppler/goo/gmem.h
+--- poppler.orig/goo/gmem.h      2018-09-21 23:41:09 +0200
++++ poppler/goo/gmem.h  2018-09-24 03:24:39 +0200
+@@ -34,6 +34,23 @@
+
+ #include "GooCheckedOps.h"
+
++#ifdef __MORPHOS__
++
++#if !defined(_GLIBCXX_CSTDINT) && !defined(_STDLIB_H_) /* avoid conflicts with <cstdint> and <stdlib.h> also */
++
++namespace std {
++
++void *malloc(int size);
++void *realloc(void *ptr,int size);
++void free(void *ptr);
++void abort(void);
++
++};
++
++#endif
++
++#endif
++
+ /// Same as malloc, but prints error message and exits if malloc() returns NULL.
+ inline void *gmalloc(size_t size, bool checkoverflow = false)
+ {
+diff -ruN poppler.orig/poppler/Makefile poppler/poppler/Makefile
+--- poppler.orig/poppler/Makefile	1970-01-01 01:00:00 +0100
++++ poppler/poppler/Makefile	2023-01-07 03:25:31 +0200
+@@ -0,0 +1,104 @@
++include ../config.mk
++
++OBJS=  Annot.o \
++	AnnotStampImageHelper.o \
++	JPEG2000Stream.o \
++	DCTStream.o \
++	Array.o \
++	Catalog.o \
++	CharCodeToUnicode.o \
++	CMap.o \
++	Error.o \
++	Dict.o \
++	Decrypt.o \
++	DateInfo.o \
++	Gfx.o \
++	Function.o \
++	FontInfo.o \
++	Form.o \
++	FontEncodingTables.o \
++	FileSpec.o \
++	JArithmeticDecoder.o \
++	GlobalParams.o \
++	GfxState.o \
++	GfxFont.o \
++	Object.o \
++	NameToCharCode.o \
++	Movie.o \
++	Link.o \
++	Lexer.o \
++	JBIG2Stream.o \
++	Page.o \
++	OutputDev.o \
++	Outline.o \
++	OptionalContent.o \
++	PDFDocEncoding.o \
++	PDFDoc.o \
++	Parser.o \
++	PageTransition.o \
++	Stream.o \
++	PSTokenizer.o \
++	PreScanOutputDev.o \
++	ProfileData.o \
++	Sound.o \
++	TextOutputDev.o \
++	PSOutputDev.o \
++	XRef.o \
++	UnicodeTypeTable.o \
++	UnicodeMap.o \
++	UnicodeMapFuncs.o \
++	SecurityHandler.o \
++	PageLabelInfo.o \
++	CairoOutputDev.o \
++	CairoRescaleBox.o \
++	CairoFontEngine.o \
++	CachedFile.o \
++	Rendition.o \
++	ViewerPreferences.o \
++	Linearization.o \
++	Hints.o \
++	FlateStream.o \
++	SplashOutputDev.o \
++	UTF.o \
++	StructElement.o \
++	StructTreeRoot.o \
++	MarkedContentOutputDev.o \
++	SignatureInfo.o \
++	FlateEncoder.o \
++	CertificateInfo.o \
++	CourierBoldObliqueWidths.pregenerated.o \
++	CourierBoldWidths.pregenerated.o \
++	CourierObliqueWidths.pregenerated.o \
++	CourierWidths.pregenerated.o \
++	HelveticaWidths.pregenerated.o \
++	HelveticaObliqueWidths.pregenerated.o \
++	HelveticaBoldWidths.pregenerated.o \
++	HelveticaBoldObliqueWidths.pregenerated.o \
++	TimesRomanWidths.pregenerated.o \
++	TimesItalicWidths.pregenerated.o \
++	TimesBoldWidths.pregenerated.o \
++	TimesBoldItalicWidths.pregenerated.o \
++	SymbolWidths.pregenerated.o \
++	ZapfDingbatsWidths.pregenerated.o\
++	JSInfo.o\
++	ImageEmbeddingUtils.o\
++	CryptoSignBackend.o\
++
++TARGET = libpoppler.a
++INCLUDES = $(GLOBAL_INCLUDES) -I. -I.. -I../fofi -I../goo -I../../../../libs/cairo/MorphOS/os-include/cairo -I./../../jpeg-9f -I../../../../../gen/host/libnix/include/openjpeg-2.5
++
++# For building with the public SDK
++INCLUDES += -I ../../include -I../../include/cairo
++
++$(TARGET): $(OBJS)
++	$(AR) $(TARGET) $(OBJS)
++
++clean:
++	rm -f *.o *.a
++
++.cc.o:
++	$(CC) $(CFLAGS) -O2 $(INCLUDES) -c $*.cc
++
++.cpp.o:
++	$(CXX) $(CPPFLAGS) -O2 $(INCLUDES) -c $*.cpp
++
++
+diff -ruN poppler.orig/poppler/PDFDoc.cc poppler/poppler/PDFDoc.cc
+--- poppler.orig/poppler/PDFDoc.cc       2023-07-03 23:05:09 +0200
++++ poppler/poppler/PDFDoc.cc   2026-01-07 11:01:08 +0200
+@@ -69,6 +69,23 @@
+ #include <config.h>
+ #include <poppler-config.h>
+
++#ifdef __MORPHOS__
++
++namespace std {
++
++char* setlocale (int category, const char* locale);
++
++};
++
++#ifndef LC_NUMERIC
++#define        LC_NUMERIC      4
++#endif
++
++#endif
++
++#define _GLIBCXX_CLOCALE 1      /* mute some annoying locale errors triggered by c++ includes */
++//#define _GLIBCXX_CXX_LOCALE_H 1         /* inside <string> */
++
+ #include <array>
+ #include <cctype>
+ #include <cstdio>
+diff -ruN poppler.orig/poppler/poppler-config.h poppler/poppler/poppler-config.h
+--- poppler.orig/poppler/poppler-config.h	1970-01-01 01:00:00 +0100
++++ poppler/poppler/poppler-config.h	2012-07-22 21:01:30 +0200
+@@ -0,0 +1,134 @@
++/* poppler/poppler-config.h.  Generated from poppler-config.h.in by configure.  */
++//================================================= -*- mode: c++ -*- ====
++//
++// poppler-config.h
++//
++// Copyright 1996-2004 Glyph & Cog, LLC
++//
++//========================================================================
++
++#ifndef POPPLER_CONFIG_H
++#define POPPLER_CONFIG_H
++
++// We duplicate some of the config.h #define's here since they are
++// used in some of the header files we install.  The #ifndef/#endif
++// around #undef look odd, but it's to silence warnings about
++// redefining those symbols.
++
++/* Enable multithreading support. */
++#ifndef MULTITHREADED
++#define MULTITHREADED 1
++#endif
++
++/* Enable exceptions. */
++#ifndef USE_EXCEPTIONS
++#define USE_EXCEPTIONS 1
++#endif
++
++/* Use fixedpoint. */
++#ifndef USE_FIXEDPOINT
++/* #undef USE_FIXEDPOINT */
++#endif
++
++/* Include support for OPI comments. */
++#ifndef OPI_SUPPORT
++#define OPI_SUPPORT 1
++#endif
++
++/* Enable word list support. */
++#ifndef TEXTOUT_WORD_LIST
++#define TEXTOUT_WORD_LIST 1
++#endif
++
++/* Use single precision arithmetic in the Splash backend */
++#ifndef USE_FLOAT
++#define USE_FLOAT 1
++#endif
++
++/* Use libjpeg instead of builtin jpeg decoder. */
++#ifndef ENABLE_LIBJPEG
++#define ENABLE_LIBJPEG 1
++#endif
++
++/* Build against libtiff. */
++#ifndef ENABLE_LIBTIFF
++#define ENABLE_LIBTIFF 1
++#endif
++
++/* Build against libpng. */
++#ifndef ENABLE_LIBPNG
++#define ENABLE_LIBPNG 1
++#endif
++
++/* Use zlib instead of builtin zlib decoder. */
++#ifndef ENABLE_ZLIB
++#define ENABLE_ZLIB 1
++#endif
++
++/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
++   */
++#ifndef HAVE_DIRENT_H
++#define HAVE_DIRENT_H 1
++#endif
++
++/* Defines if gettimeofday is available on your system */
++#ifndef HAVE_GETTIMEOFDAY
++#define HAVE_GETTIMEOFDAY 1
++#endif
++
++/* Have FreeType2 include files */
++#ifndef HAVE_FREETYPE_H
++#define HAVE_FREETYPE_H 1
++#endif
++
++// Also, there's a couple of preprocessor symbols in the header files
++// that are used but never defined: DISABLE_OUTLINE, DEBUG_MEM and
++
++//#define DEBUG_MEM 1
++
++//------------------------------------------------------------------------
++// version
++//------------------------------------------------------------------------
++
++// copyright notice
++#define popplerCopyright "Copyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org"
++#define xpdfCopyright "Copyright 1996-2011, 2022 Glyph & Cog, LLC"
++
++//------------------------------------------------------------------------
++// popen
++//------------------------------------------------------------------------
++
++#if defined(_MSC_VER) || defined(__BORLANDC__)
++#define popen _popen
++#define pclose _pclose
++#endif
++
++#if defined(VMS) || defined(VMCMS) || defined(DOS) || defined(OS2) || defined(__EMX__) || defined(WIN32) || defined(__DJGPP__) || defined(MACOS)
++#define POPEN_READ_MODE "rb"
++#else
++#define POPEN_READ_MODE "r"
++#endif
++
++//------------------------------------------------------------------------
++// Win32 stuff
++//------------------------------------------------------------------------
++
++#if defined(_WIN32) && !defined(_MSC_VER)
++#include <windef.h>
++#else
++#define CDECL
++#endif
++
++//------------------------------------------------------------------------
++// Compiler
++//------------------------------------------------------------------------
++
++#if __GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ > 4)
++#define GCC_PRINTF_FORMAT(fmt_index, va_index) \
++	__attribute__((__format__(__printf__, fmt_index, va_index)))
++#else
++#define GCC_PRINTF_FORMAT(fmt_index, va_index)
++#endif
++
++
++#endif /* POPPLER_CONFIG_H */
+diff -ruN poppler.orig/poppler/PSOutputDev.cc poppler/poppler/PSOutputDev.cc
+--- poppler.orig/poppler/PSOutputDev.cc  2023-07-03 23:05:09 +0200
++++ poppler/poppler/PSOutputDev.cc      2026-01-07 10:44:45 +0200
+@@ -129,7 +129,7 @@
+                                 "  /setpagedevice where {",
+                                 "    pop 2 dict begin",
+                                 "      /Policies 1 dict dup begin /PageSize 6 def end def",
+-                                "      { /Duplex true def } if",
++//                                 { /Duplex true def } if",   // turned off duplex (rzk)
+                                 "    currentdict end setpagedevice",
+                                 "  } {",
+                                 "    pop",
+diff -ruN poppler.orig/poppler/stamp-h2 poppler/poppler/stamp-h2
+--- poppler.orig/poppler/stamp-h2	1970-01-01 01:00:00 +0100
++++ poppler/poppler/stamp-h2	2011-06-07 20:35:58 +0200
+@@ -0,0 +1 @@
++timestamp for poppler/poppler-config.h
+diff -ruN poppler.orig/poppler/Stream.h poppler/poppler/Stream.h
+--- poppler.orig/poppler/Stream.h	2017-06-17 18:35:25 +0200
++++ poppler/poppler/Stream.h	2026-01-07 10:59:33 +0200
+@@ -57,6 +57,12 @@
+ #include "Object.h"
+ #include "goo/GooCheckedOps.h"
+ 
++#ifdef __MORPHOS__
++#undef read
++#undef close
++#undef write
++#endif
++
+ class GooFile;
+ class BaseStream;
+ class CachedFile;
+diff -ruN poppler.orig/splash/makefile poppler/splash/makefile
+--- poppler.orig/splash/makefile	1970-01-01 01:00:00 +0100
++++ poppler/splash/makefile	2012-07-22 21:01:34 +0200
+@@ -0,0 +1,35 @@
++include ../config.mk
++
++OBJS=  Splash.o \
++	SplashFontFileID.o \
++	SplashBitmap.o \
++	SplashClip.o \
++	SplashFont.o \
++	SplashFontEngine.o \
++	SplashFontFile.o \
++	SplashFTFont.o \
++	SplashFTFontEngine.o \
++	SplashFTFontFile.o \
++	SplashPath.o \
++	SplashPattern.o \
++	SplashScreen.o \
++	SplashState.o \
++	SplashXPath.o \
++	SplashXPathScanner.o
++
++TARGET = libpoppler-splash.a
++INCLUDES = $(GLOBAL_INCLUDES) -I. -I.. -I../fofi -I../goo -I../../../../libs/cairo/MorphOS/os-include/cairo
++
++$(TARGET): $(OBJS)
++	$(AR) $(TARGET) $(OBJS)
++
++clean:
++	rm -f *.o *.a
++
++.cc.o:
++	$(CC) $(CFLAGS) -O2 $(INCLUDES) -c $*.cc
++
++.cpp.o:
++	$(CXX) $(CPPFLAGS) -O2 $(INCLUDES) -c $*.cpp
++
++
+diff -ruN poppler.orig/splash/SplashBitmap.cc poppler/splash/SplashBitmap.cc
+--- poppler.orig/splash/SplashBitmap.cc	2019-09-22 17:56:00 +0100
++++ poppler/splash/SplashBitmap.cc	2025-10-16 06:10:34 +0200
+@@ -373,8 +373,8 @@
+ SplashError SplashBitmap::writeImgFile(SplashImageFileFormat format, FILE *f, double hDPI, double vDPI, WriteImgParams *params)
+ {
+     ImgWriter *writer;
+-    SplashError e;
+-
++    SplashError e = 0;
++#ifndef __MORPHOS__
+     SplashColorMode imageWriterFormat = splashModeRGB8;
+ 
+     switch (format) {
+@@ -437,6 +437,7 @@
+ 
+     e = writeImgFile(writer, f, hDPI, vDPI, imageWriterFormat);
+     delete writer;
++ #endif
+     return e;
+ }
+ 
+diff -ruN poppler.orig/cpp/poppler-version.h poppler/cpp/poppler-version.h
+--- poppler.orig/cpp/poppler-version.h	1970-01-01 01:00:00 +0100
++++ poppler/cpp/poppler-version.h	2018-09-16 13:53:37 +0200
+@@ -0,0 +1,39 @@
++/*
++ * Copyright (C) 2009, Pino Toscano <pino@kde.org>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2, or (at your option)
++ * any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.
++ */
++
++#ifndef POPPLER_VERSION_H
++#define POPPLER_VERSION_H
++
++#include "poppler-global.h"
++
++#define POPPLER_VERSION "26.01.0"
++#define POPPLER_VERSION_MAJOR 26
++#define POPPLER_VERSION_MINOR 01
++#define POPPLER_VERSION_MICRO 0
++
++namespace poppler
++{
++
++POPPLER_CPP_EXPORT std::string version_string();
++POPPLER_CPP_EXPORT unsigned int version_major();
++POPPLER_CPP_EXPORT unsigned int version_minor();
++POPPLER_CPP_EXPORT unsigned int version_micro();
++
++}
++
++#endif
+diff -ruN poppler.orig/poppler/mutex poppler/poppler/mutex
+--- poppler.orig/poppler/mutex	1970-01-01 01:00:00 +0100
++++ poppler/poppler/mutex	2019-03-17M 14:52:10 +0200
+@@ -0,0 +1,12 @@
++#ifndef _GLIBCXX_MUTEX
++
++/* cyfm 2018/10/23: I wonder if that is actually missing in our 2018 SDK GCC builds .. */
++typedef struct timespec __gthread_time_t;
++
++#ifndef _GLIBCXX_HAS_GTHREADS
++#define _GLIBCXX_HAS_GTHREADS
++#endif
++
++#endif
++
++#include <c++/mutex>
+diff -ruN poppler.orig/poppler/SignatureInfo.h  poppler/poppler/SignatutureInfo.h
+--- poppler.orig/poppler/SignatureInfo.h 2023-04-02 15:15:12 +0100
++++ poppler/poppler/SignatureInfo.h      2026-01-07 11:17:57 +0100
+@@ -20,6 +20,9 @@
+ #ifndef SIGNATUREINFO_H
+ #define SIGNATUREINFO_H
+
++#ifndef _GLIBCXX_CXX_LOCALE_H
++#define _GLIBCXX_CXX_LOCALE_H      /* mute some annoying locale errors triggered by c++ includes like <memory>*/
++#endif
+ #include <memory>
+ #include <ctime>
+
+diff -ruN poppler.orig/poppler/CertificateInfo.h  poppler/poppler/CertificateInfo.h
+--- poppler.orig/poppler/CertificateInfo.h       2023-04-02 22:15:12 +0100
++++ poppler/poppler/CertificateInfo.h    2026-01-07 11:07:08 +0100
+@@ -15,6 +15,9 @@
+ #ifndef CERTIFICATEINFO_H
+ #define CERTIFICATEINFO_H
+
++#ifndef _GLIBCXX_CXX_LOCALE_H
++#define _GLIBCXX_CXX_LOCALE_H      /* mute some annoying locale errors triggered by c++ includes like <memory>*/
++#endif
+ #include <ctime>
+ #include "goo/GooString.h"
+ #include "poppler_private_export.h"
+diff -ruN poppler.orig/poppler/XRef.cc poppler/poppler/XRef.cc
+--- poppler.orig/poppler/XRef.cc      2023-04-02 12:57:22 +0100
++++ poppler/poppler/XRef.cc   2025-05-09 06:17:55 +0100
+@@ -1787,7 +1787,7 @@
+ 
+             if (!parseEntry(mainXRefEntriesOffset + 20 * i, &entries[i])) {
+                 error(errSyntaxError, -1, "Failed to parse XRef entry [{0:d}].", i);
+-                return &dummyXRefEntry;
++//              return &dummyXRefEntry;
+             }
+         } else {
+             // Read XRef tables until the entry we're looking for is found
+diff -ruN poppler.orig/poppler/CairoOutputDev.cc poppler/poppler/CairoOutputDev.cc
+--- poppler.orig/poppler/CairoOutputDev.cc	2019-11-27 23:29:05 +0100
++++ poppler/poppler/CairoOutputDev.cc	2026-01-07 10:29:42 +0100
+@@ -140,6 +140,23 @@
+ FT_Library CairoOutputDev::ft_lib;
+ std::once_flag CairoOutputDev::ft_lib_once_flag;
+ 
++#ifdef __MORPHOS__
++#include <clib/debug_protos.h>
++#define D(x)
++void CairoOutputDev::finalCleanup() {
++  D(kprintf("%s: ft_lib %p\n",__FUNCTION__,ft_lib);)
++
++  if(ft_lib)
++  {
++     FT_Error err;
++
++     err= FT_Done_FreeType(ft_lib);
++
++     D(kprintf("%s: FT_Done_FreeType returned err %d\n",__FUNCTION__,err);)
++  }
++}
++#endif
++
+ CairoOutputDev::CairoOutputDev()
+ {
+     doc = nullptr;
+diff -ruN poppler.orig/poppler/CairoOutputDev.h poppler/poppler/CairoOutputDev.h
+--- poppler.orig/poppler/CairoOutputDev.h	2019-11-27 23:29:05 +0100
++++ poppler/poppler/CairoOutputDev.h	2025-06-04 04:26:11 +0100
+@@ -272,7 +272,9 @@
+     bool hasType3GlyphBBox() { return t3_glyph_has_bbox; }
+     double *getType3GlyphBBox() { return t3_glyph_bbox; }
+     bool type3GlyphHasColor() { return t3_glyph_has_color; }
+-
++#ifdef __MORPHOS__
++    static void finalCleanup();
++#endif
+ protected:
+     void doPath(cairo_t *cairo, const GfxPath *path);
+     cairo_surface_t *downscaleSurface(cairo_surface_t *orig_surface);
+diff -ruN poppler.orig/poppler/PDFDocEncoding.h poppler/poppler/PDFDocEncoding.h
+--- poppler-0.86.0/poppler/PDFDocEncoding.h	2020-00-29 00:26:55 +0100
++++ poppler-0.86.0/poppler/PDFDocEncoding.h	2025-02-04 13:29:47 +0100
+@@ -26,6 +26,10 @@
+ #ifndef PDFDOCENCODING_H
+ #define PDFDOCENCODING_H
+ 
++#ifndef _GLIBCXX_CXX_LOCALE_H
++#define _GLIBCXX_CXX_LOCALE_H      /* mute some annoying locale errors triggered by c++ includes like <memory>*/
++#endif
++
+ #include <string>
+ 
+ #include "CharTypes.h"
+diff -ruN poppler.orig/cpp/poppler_cpp_export.h poppler/cpp/poppler_cpp_export.h
+--- poppler.orig/cpp/poppler_cpp_export.h	1970-01-01 01:00:00 +0100
++++ poppler/cpp/poppler_cpp_export.h	2021-08-01 07:48:00 +0200
+@@ -0,0 +1,42 @@
++
++#ifndef POPPLER_CPP_EXPORT_H
++#define POPPLER_CPP_EXPORT_H
++
++#ifdef POPPLER_CPP_STATIC_DEFINE
++#  define POPPLER_CPP_EXPORT
++#  define POPPLER_CPP_NO_EXPORT
++#else
++#  ifndef POPPLER_CPP_EXPORT
++#    ifdef poppler_cpp_EXPORTS
++        /* We are building this library */
++#      define POPPLER_CPP_EXPORT __attribute__((visibility("default")))
++#    else
++        /* We are using this library */
++#      define POPPLER_CPP_EXPORT __attribute__((visibility("default")))
++#    endif
++#  endif
++
++#  ifndef POPPLER_CPP_NO_EXPORT
++#    define POPPLER_CPP_NO_EXPORT __attribute__((visibility("hidden")))
++#  endif
++#endif
++
++#ifndef POPPLER_CPP_DEPRECATED
++#  define POPPLER_CPP_DEPRECATED __attribute__ ((__deprecated__))
++#endif
++
++#ifndef POPPLER_CPP_DEPRECATED_EXPORT
++#  define POPPLER_CPP_DEPRECATED_EXPORT POPPLER_CPP_EXPORT POPPLER_CPP_DEPRECATED
++#endif
++
++#ifndef POPPLER_CPP_DEPRECATED_NO_EXPORT
++#  define POPPLER_CPP_DEPRECATED_NO_EXPORT POPPLER_CPP_NO_EXPORT POPPLER_CPP_DEPRECATED
++#endif
++
++#if 0 /* DEFINE_NO_DEPRECATED */
++#  ifndef POPPLER_CPP_NO_DEPRECATED
++#    define POPPLER_CPP_NO_DEPRECATED
++#  endif
++#endif
++
++#endif /* POPPLER_CPP_EXPORT_H */
+diff -ruN poppler.orig/poppler_private_export.h poppler/poppler_private_export.h
+--- poppler.orig/poppler_private_export.h	1970-01-01 01:00:00 +0100
++++ poppler/poppler_private_export.h	2021-08-01 07:49:49 +0200
+@@ -0,0 +1,42 @@
++
++#ifndef POPPLER_PRIVATE_EXPORT_H
++#define POPPLER_PRIVATE_EXPORT_H
++
++#ifdef POPPLER_PRIVATE_STATIC_DEFINE
++#  define POPPLER_PRIVATE_EXPORT
++#  define POPPLER_PRIVATE_NO_EXPORT
++#else
++#  ifndef POPPLER_PRIVATE_EXPORT
++#    ifdef poppler_EXPORTS
++        /* We are building this library */
++#      define POPPLER_PRIVATE_EXPORT __attribute__((visibility("default")))
++#    else
++        /* We are using this library */
++#      define POPPLER_PRIVATE_EXPORT __attribute__((visibility("default")))
++#    endif
++#  endif
++
++#  ifndef POPPLER_PRIVATE_NO_EXPORT
++#    define POPPLER_PRIVATE_NO_EXPORT __attribute__((visibility("hidden")))
++#  endif
++#endif
++
++#ifndef POPPLER_PRIVATE_DEPRECATED
++#  define POPPLER_PRIVATE_DEPRECATED __attribute__ ((__deprecated__))
++#endif
++
++#ifndef POPPLER_PRIVATE_DEPRECATED_EXPORT
++#  define POPPLER_PRIVATE_DEPRECATED_EXPORT POPPLER_PRIVATE_EXPORT POPPLER_PRIVATE_DEPRECATED
++#endif
++
++#ifndef POPPLER_PRIVATE_DEPRECATED_NO_EXPORT
++#  define POPPLER_PRIVATE_DEPRECATED_NO_EXPORT POPPLER_PRIVATE_NO_EXPORT POPPLER_PRIVATE_DEPRECATED
++#endif
++
++#if 0 /* DEFINE_NO_DEPRECATED */
++#  ifndef POPPLER_PRIVATE_NO_DEPRECATED
++#    define POPPLER_PRIVATE_NO_DEPRECATED
++#  endif
++#endif
++
++#endif /* POPPLER_PRIVATE_EXPORT_H */
+--- poppler-21.11.0.orig/goo/PNGWriter.cc	2021-11-01 11:16:38.000000000 +0200
++++ poppler-21.11.0/goo/PNGWriter.cc	2021-12-14 10:06:33.747716565 +0200
+@@ -14,6 +14,8 @@
+ //
+ //========================================================================
+ 
++#define PNG_SKIP_SETJMP_CHECK 1
++
+ #include "PNGWriter.h"
+ 
+ #if ENABLE_LIBPNG
+@@ -107,14 +109,22 @@
+         return false;
+     }
+ 
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "png_jmpbuf failed");
+         return false;
+     }
+ 
+     /* write header */
+     png_init_io(priv->png_ptr, f);
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "Error during writing header");
+         return false;
+     }
+@@ -160,7 +170,11 @@
+     }
+ 
+     png_write_info(priv->png_ptr, priv->info_ptr);
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "error during writing png info bytes");
+         return false;
+     }
+@@ -172,7 +186,11 @@
+ {
+     png_write_image(priv->png_ptr, rowPointers);
+     /* write bytes */
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "Error during writing bytes");
+         return false;
+     }
+@@ -184,7 +202,11 @@
+ {
+     // Write the row to the file
+     png_write_rows(priv->png_ptr, row, 1);
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "error during png row write");
+         return false;
+     }
+@@ -196,7 +218,11 @@
+ {
+     /* end write */
+     png_write_end(priv->png_ptr, priv->info_ptr);
++#if _JBLEN != 59
++    if (setjmp59(png_jmpbuf(priv->png_ptr))) {
++#else
+     if (setjmp(png_jmpbuf(priv->png_ptr))) {
++#endif
+         error(errInternal, -1, "Error during end of write");
+         return false;
+     }
+diff -ruN poppler-21.12.0/poppler/ImageEmbeddingUtils.cc.orig  poppler-21.12.0/poppler/ImageEmbeddingUtils.cc
+--- poppler-21.12.0/poppler/ImageEmbeddingUtils.cc  2023-06-05 12:29:56 +0100
++++ poppler-21.12.0/poppler/ImageEmbeddingUtils.cc      2026-01-07 10:52:31 +0100
+@@ -14,6 +14,8 @@
+
+ #include <config.h>
+
++#define PNG_SKIP_SETJMP_CHECK 1
++
+ #include <memory>
+ #if ENABLE_LIBJPEG
+ #    include <cstdio> // jpeglib.h is broken on purpose and needs cstdio include before it
+@@ -239,7 +241,11 @@
+             png_destroy_read_struct(&png, nullptr, nullptr);
+             return nullptr;
+         }
++#if _JBLEN != 59
++        if (setjmp59(png_jmpbuf(png))) {
++#else
+         if (setjmp(png_jmpbuf(png))) {
++#endif
+             error(errInternal, -1, "Couldn't load PNG. Failed to set up error handling for reading PNG");
+             png_destroy_read_struct(&png, &info, nullptr);
+             return nullptr;
+@@ -339,7 +348,11 @@
+         JpegErrorManager errorManager;
+         info.err = jpeg_std_error(&errorManager.pub);
+         errorManager.pub.error_exit = jpegExitErrorHandler;
++#if _JBLEN != 59
++        if (setjmp59(errorManager.setjmpBuffer)) {
++#else
+         if (setjmp(errorManager.setjmpBuffer)) {
++#endif
+             // The setjmp point.
+             jpeg_destroy_decompress(&info);
+             error(errInternal, -1, "libjpeg failed to process the file");
+@@ -350,7 +360,7 @@
+         // fileSize is guaranteed to be in the range 0..int max by the checks in embed()
+         // jpeg_mem_src takes an unsigned long in the 3rd parameter
+         jpeg_mem_src(&info, reinterpret_cast<unsigned char *>(fileContent.data()), static_cast<unsigned long>(fileContent.size()));
+-        jpeg_read_header(&info, TRUE);
++        jpeg_read_header(&info, (boolean)TRUE);
+         jpeg_start_decompress(&info);
+         auto result = std::make_unique<JpegEmbedder>(info.output_width, info.output_height, std::move(fileContent));
+         jpeg_abort_decompress(&info);
+diff -uN poppler-24.06.0.orig/poppler/UTF.cc poppler-24.06.0/poppler/UTF.cc
+--- poppler-24.06.0.orig/poppler/UTF.cc      2024-08-02 00:59:00 +0000
++++ poppler-24.06.0/poppler/UTF.cc      2025-12-03 03:03:58 +0000
+@@ -31,6 +31,8 @@
+ //
+ //========================================================================
+
++#include <locale>
++
+ #include "goo/gmem.h"
+ #include "PDFDocEncoding.h"
+ #include "GlobalParams.h"
+diff -uN poppler-24.06.0.orig/poppler/SignatureInfo.cc poppler-24.06.0/poppler/SignatureInfo.cc
+--- poppler-24.06.0.orig/poppler/SignatureInfo.cc        2024-06-02 19:05:18 +0000
++++ poppler-24.06.0/poppler/SignatureInfo.cc    2024-08-04 17:09:08 +0000
+@@ -17,6 +17,8 @@
+ //
+ //========================================================================
+
++#include <locale>
++
+ #include <config.h>
+
+ #include "SignatureInfo.h"
+diff -uN poppler-24.06.0.orig/poppler/CertificateInfo.cc poppler-24.06.0/poppler/CertificateInfo.cc
+--- poppler-24.06.0.orig/poppler/CertificateInfo.cc  2024-08-01 00:59:00 +0000
++++ poppler-24.06.0/poppler/CertificateInfo.cc  2024-08-04 17:14:17 +0000
+@@ -12,6 +12,8 @@
+ //
+ //========================================================================
+
++#include <locale>
++
+ #include "CertificateInfo.h"
+
+ #include <cstring>
+diff -ruN poppler-26.01.0.orig/poppler/Parser.cc  poppler-26.01.0/poppler/Parser.cc
+--- poppler-26.01.0.orig/poppler/Parser.cc       2026-01-06 23:13:29.000000000 +0100
++++ poppler-26.01.0/poppler/Parser.cc   2026-01-07 12:19:52.000000000 +0100
+@@ -41,6 +41,10 @@
+ #include "XRef.h"
+ #include "Error.h"
+
++#ifndef LLONG_MAX
++#include <climits>
++#endif
++
+ // Max number of nested objects.  This is used to catch infinite loops
+ // in the object structure. And also technically valid files with
+ // lots of nested arrays that made us consume all the stack

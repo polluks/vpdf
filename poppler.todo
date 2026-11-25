@@ -1,0 +1,6 @@
+$Id: poppler.todo,v 1.1 2018/09/18 20:39:40 cyfm Exp $
+
+MorphOS specific todo
+
+- fix dateStringToTime() function in poppler/DateInfo.cc, currently always returns -1
+- fix modificationTimeChangedSinceOpen() function in goo/gfile.cc, currently (as of libpoppler 0.63.0) always returns false

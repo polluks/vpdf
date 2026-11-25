@@ -1,0 +1,475 @@
+## version $VER: VPDF.catalog 1.9 (24.02.2025)
+## language suomi
+## codeset 0
+;
+## chunk AUTH Harry Sintonen
+;
+; VPDF locales
+; Michal Zukowski 2015-2022
+;
+MSG_APPLICATION_DESCRIPTION
+PDF-n‰ytin
+; PDF Viewer
+;
+MSG_PRINTER_RANGE
+Tulostusalue
+; Print Range
+;
+MSG_PRINTER_PAGES
+Sivut:
+; Pages:
+;
+MSG_PRINTER_FIRSTPAGE
+Ensimm‰inen sivu:
+; First Page:
+;
+MSG_PRINTER_LASTPAGE
+Viimeinen sivu:
+; Last Page:
+;
+MSG_PRINTER_MANUAL
+Manuaalinen valinta
+; Manual Selection
+;
+MSG_PRINTER_RESET
+Palauta
+; Reset
+;
+MSG_PRINTER_REVERSE
+K‰‰nteist‰ sivut
+; Reverse Pages
+;
+MSG_PRINTER_ORIENTATION
+Sivun asento
+; Page Orientation
+;
+MSG_PRINTER_COPIES
+Kopioita:
+; Copies:
+;
+MSG_PRINTER_COLLATE
+Lomita
+; Collate
+;
+MSG_PRINTER_SCALING
+Sivun skaalaus:
+; Page Scaling:
+;
+MSG_PRINTER_PAGESPERSHEET
+Sivuja paperilla:
+; Pages per Sheet:
+;
+MSG_PRINTER_ORDER
+Sivujen j‰rjestys:
+; Pages Order:
+;
+MSG_PRINTER_AUTOROTATE
+K‰‰nn‰ ja keskit‰ automaattisesti
+; Auto Rotate and Center
+;
+MSG_PRINTER_DRIVER
+Ajuri
+; Driver
+;
+MSG_PRINTER_PREFERENCES
+Tulostusasetukset
+; Printer Preferences
+;
+MSG_PRINTER_WINTITLE
+VPDF ∑ Dokumentin tulostus
+; VPDF ∑ Print Document
+;
+MSG_PRINTER_PRINT
+Tulosta
+; _Print
+;
+MSG_PRINTER_CANCEL
+Peruuta
+; Cancel
+;
+MSG_PRINTER_OUTPUT
+Tulos:
+; Output:
+;
+MSG_PRINTER_ODD
+Paritomat
+; Odd
+;
+MSG_PRINTER_EVEN
+Parilliset
+; Even
+;
+MSG_PRINTER_ODDEVEN
+Parittomat ja parilliset
+; Odd and Even
+;
+MSG_PRINTER_NONE
+Ei mit‰‰n
+; None
+;
+MSG_PRINTER_BEST
+Paras
+; Best
+;
+MSG_PRINTER_MULTIPLE
+Useita sivuja paperilla
+; Multiple pages per sheet
+;
+MSG_PRINTER_CUSTOM
+Mukautettu
+; Custom
+;
+MSG_PRINTER_HORIZONTAL_VERTICAL
+Vaakasuora-pystysuora
+; Horizontal-Vertical
+MSG_PRINTER_HORIZONTAL_VERTICALREVERSED
+Vaakasuora - pystysuora k‰‰nteinen
+; Horizontal - Vertical Reversed
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL
+Pystysuora - k‰‰nteinen vaakasuora 
+; Horizontal Reversed-Vertical
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL_REVERSED
+Pystysuora k‰‰nteinen - vaakasuora k‰‰nteinen
+; Horizontal Reversed-Vertical Reversed
+MSG_PRINTER_VERTICAL_HORIZONTAL
+Pystysuora-vaakasuora
+; Vertical-Horizontal
+MSG_PRINTER_VERTICALREVERSED_HORIZONTAL
+Pystysuora k‰‰nteinen - vaakasuora
+; Vertical Reversed-Horizontal
+MSG_PRINTER_VERTICAL_HORIZONTALREVERSED
+Pystysuora - vaakasuora k‰‰nteinen
+; Vertical-Horizontal Reversed
+MSG_PRINTER_VERTICAL_REVERSED_HORIZONTALREVERSED
+Vaakasuora k‰‰nteinen - pystysuora k‰‰nteinen
+; Vertical Reversed-Horizontal Reversed
+MSG_PRINTER_ABORT
+Keskeyt‰
+; Abort
+;
+MSG_MENU_PROJECT
+Projekti
+; Project
+;
+MSG_MENU_NEWWIN
+Uusi ikkuna...
+; New Window...
+MSG_MENU_NEWTAB
+Uusi v‰lilehti
+; New Tab
+MSG_MENU_FILE
+Avaa tiedosto...
+; Open File...
+MSG_MENU_RECENT
+Avaa ‰skeinen
+; Open Recent
+MSG_MENU_PRINT
+Tulosta...
+; Print...
+MSG_MENU_ABOUT
+Tietoja...
+; About...
+MSG_MENU_QUIT
+Lopeta
+; Quit
+MSG_MENU_EDIT
+Muokkaa
+; Edit
+MSG_MENU_COPY
+Kopioi
+; Copy
+MSG_MENU_LOG
+Loki...
+; Log...
+MSG_MENU_SETTINGS
+Asetukset
+; Settings
+MSG_MENU_SETTINGS_SETTINGS
+Asetukset...
+; Settings...
+MSG_MENU_SETTINGS_SAVE
+Tallenna oletuksiksi
+; Save as Default
+MSG_MENU_SETTINGS_MUI
+MUI...
+; MUI...
+MSG_MENU_WINDOWS
+Ikkunat
+; Windows
+MSG_NOFILE
+Ei ladattua tiedostoa.
+; No file loaded.
+MSG_SAVE
+_Tallenna
+; _Save
+MSG_CANCEL
+_Peruuta
+; _Cancel
+MSG_USE
+_K‰yt‰
+; _Use
+MSG_WINDOWS
+Ikkunat
+; Windows
+MSG_SETTINGS_LAYOUT
+Sijoittelu:
+; Layout:
+MSG_SETTINGS_SCALING
+Skaalaus:
+; Scaling:
+MSG_SETTINGS_OUTLINE
+Avaa dokumentin yleiskuvaus
+; Open document outline
+MSG_SETTINGS_DOCUMENT
+Dokumentti
+; Document
+MSG_SETTINGS_LOGWINDOW
+Avaa loki-ikkuna automaattisesti
+; Open log window automatically
+MSG_REQ_OPEN
+Valitse avattava tiedosto...
+; Select File to Open...
+MSG_REQ_SAVE
+Valitse tallennettava tiedosto...
+; Select File to Save...
+MSG_REQ_DRAWER
+Valitse kansio...
+; Select Drawer...
+MSG_TOOLBAR_ZOOMIN
+Suurenna
+; Zoom In
+MSG_TOOLBAR_ZOOMOUT
+Pienenn‰
+; Zoom Out
+MSG_TOOLBAR_COUNTERCLOCKWISE
+K‰‰nn‰ vastap‰iv‰‰n
+; Rotate counterclockwise
+MSG_TOOLBAR_CLOCKWISE
+K‰‰nn‰ myˆt‰p‰iv‰‰n
+; Rotate clockwise
+MSG_TOOLBAR_MARK
+_Merkitse
+; _Mark
+MSG_TOOLBAR_SCROLL
+_Vierit‰
+; _Scroll
+MSG_TOOLBAR_OUTLINE
+_ƒ‰riviivat
+; _Outline
+MSG_TOOLBAR_FITPAGE
+Mahduta sivu
+; Fit Page
+MSG_TOOLBAR_FITWIDTH
+Mahduta leveys
+; Fit Width
+MSG_TOOLBAR_SINGLE
+Yksi
+; Single
+MSG_TOOLBAR_CONTINUOUS
+Jatkuva
+; Continuous
+MSG_TOOLBAR_FACING
+Facing
+; Facing
+MSG_TOOLBAR_CONT_FACING
+Jatkuva facing
+; Continuous Facing
+MSG_SEARCH_NEXT
+_Seuraava
+; _Next
+MSG_SEARCH_PREV
+_Edellinen
+; _Prev
+MSG_SEARCH_END
+Dokumentin loppu
+; End of Document
+MSG_SEARCH_LABEL
+_Etsi:
+; S_earch:
+MSG_SLIDER_PAGE
+Sivu %ld/%ld
+; Page %ld/%ld
+MSG_MENU_SAVE
+Tallenna tiedosto...
+; Save File...
+MSG_MENU_EXPORT
+Vie bittikartaksi...
+; Export to bitmap...
+MSG_EXPORT_WINTITLE
+Vie dokumentti bittikartaksi
+; Export document to bitmaps
+MSG_SETTINGS_LAYOUT_SINGLE
+Yksitt‰inen sivu
+; Single page
+MSG_SETTINGS_LAYOUT_CONTINOUS
+Jatkuvat sivut
+; Continuous pages
+MSG_SETTINGS_LAYOUT_FACING
+Vastakkaiset sivut
+; Facing pages
+MSG_SETTINGS_LAYOUT_CONTINOUS_FACING
+Jatkuvat vastakkaiset sivut
+; Continuous facing pages
+MSG_SETTINGS_SCALINGS_WINDOW
+Mahduta ikkunaan
+; Fit to window
+MSG_SETTINGS_SCALINGS_WIDTH
+Mahduta ikkunan leveyteen
+; Fit to window width
+MSG_SETTINGS_SCALINGS_ORIGINAL
+Alkuper‰inen
+; Original
+MSG_MENU_VIEW
+N‰yt‰
+; View
+MSG_MENU_VIEW_FULLSCREEN
+Kokoruutu
+; Fullscreen
+MSG_MENU_VIEW_OUTLINE
+N‰yt‰ ‰‰riviivat
+; Show outline
+MSG_MENU_VIEW_TOOLBAR
+N‰yt‰ tyˆkalupalkki
+; Show toolbar
+MSG_MENU_SET_ZOOM
+Aseta suurennus
+; Set zoom
+MSG_MENU_SET_LAYOUT
+Aseta asettelu
+; Set layout
+MSG_MENU_VIEW_SET_LAYOUT_SINGLE
+Yksi sivu
+; Single page
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS
+Jatkuvat sivut
+; Continuous pages
+MSG_MENU_VIEW_SET_LAYOUT_FACING
+Vastakkaiset sivut
+; Facing pages
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS_FACING
+Jatkuvat vastakkaiset sivut
+; Continuous facing pages
+MSG_MENU_ZOOM_FIT_PAGE
+Mahduta sivu
+; Fit page
+MSG_MENU_ZOOM_FIT_WIDTH
+Mahduta leveys
+; Fit width
+MSG_LOAD_IMAGE
+Lataa kuva...
+; Load image...
+MSG_SAVE_IMAGE
+Tallenna kuva...
+; Save image...
+MSG_PRINTING
+Tulostus
+; Printing
+MSG_SETTINGS_COLOR_REPRODUCTION
+V‰ritoisto:
+; Color Reproduction:
+MSG_SETTINGS_COLOR_REPRODUCTION_FAST
+Nopea
+; Fast
+MSG_SETTINGS_COLOR_REPRODUCTION_ACCURATE
+Tarkka
+; Accurate
+MSG_PRINTER_OUTPUTPATH
+Tulostuspolku:
+; Output path:
+;
+MSG_PRINTER_OUTFILE
+(TulosTiedosto)
+; (ToFile)
+;
+MSG_PRINTER_PROFILE
+Profiili
+; Profile
+;
+MSG_PRINTER_CURRENT_PAGE
+T‰m‰nhetkinen sivu
+; Current page
+;
+MSG_EXPORT_PARAMETERS
+Vie parametrit
+; Export parameters
+;
+MSG_EXPORT_OUTPUTFILE
+Tulostiedosto:
+; Output file:
+;
+MSG_EXPORT_BASENAME
+Valitse nimen perusosa
+; Select base name
+;
+MSG_EXPORT_SUFFIX
+p‰‰te
+; suffix
+;
+MSG_EXPORT_DPI
+DPI:
+; DPI:
+;
+MSG_EXPORT_PAGES
+Sivut
+; Pages
+;
+MSG_EXPORT_EXPORT
+Vie
+; _Export
+;
+MSG_EXPORT_STATUS
+Tallennetaan sivua %ld...
+; Saving page %ld...
+;
+MSG_EXPORT_ERROR_TITLE
+VPDF vientivirhe
+; VPDF Export Document Error
+;
+MSG_EXPORT_ERROR_STATUS
+Vientilaitteen alustusvirhe
+; Failed to initialize output device
+;
+MSG_PRINTER_BOOKLET
+Kirjanen
+; Booklet
+;
+MSG_TOOLBAR_NOTES
+Muistio
+; No_tes
+;
+MSG_MENU_VIEW_NOTES
+N‰yt‰ muistio
+; Show notes
+;
+MSG_SETTINGS_NOTES
+N‰yt‰ dokumentin muistio
+; Open document notes
+;
+MSG_SETTINGS_PAGEDIMS
+N‰yt‰ sivun koko
+; Show page dimensions
+;
+MSG_MENU_VIEW_PAGEDIMS
+N‰yt‰ sivun koko
+; Show page dimensions
+;
+MSG_MENU_SETTINGS_SNAPSHOT_DOCVIEW
+Kiinnit‰ dokumentin sijoittelu
+; Snapshot Document Layout
+;
+MSG_MENU_MERGE_FILES
+Yhdist‰ avatut dokumentit
+; Merge Open Documents
+;
+MSG_MENU_SAVEPAGE
+Tallenna nykyinen sivu tiedostoon...
+; Save current page to File...
+;
+MSG_REQ_PASSWORD_TITLE
+T‰m‰ dokumentti on salasanasuojattu
+; The document is password protected
+;
+MSG_REQ_PASSWORD_ENTER
+Syˆt‰ salasana:
+; Enter Password:
+;

@@ -1,0 +1,475 @@
+## version $VER: VPDF.catalog 1.6 (25.02.2025)
+## language svenska
+## codeset 0
+;
+## chunk AUTH Stefan Blixth
+;
+; VPDF locales
+; Michal Zukowski 2015-2022
+;
+MSG_APPLICATION_DESCRIPTION
+PDF-läsare
+; PDF Viewer
+;
+MSG_PRINTER_RANGE
+Utskriftsområde
+; Print Range
+;
+MSG_PRINTER_PAGES
+Sidor:
+; Pages:
+;
+MSG_PRINTER_FIRSTPAGE
+Första sidan:
+; First Page:
+;
+MSG_PRINTER_LASTPAGE
+Sista sidan:
+; Last Page:
+;
+MSG_PRINTER_MANUAL
+Manuellt val
+; Manual Selection
+;
+MSG_PRINTER_RESET
+Återställ
+; Reset
+;
+MSG_PRINTER_REVERSE
+Omvända sidor
+; Reverse Pages
+;
+MSG_PRINTER_ORIENTATION
+Sidorientering
+; Page Orientation
+;
+MSG_PRINTER_COPIES
+Kopior:
+; Copies:
+;
+MSG_PRINTER_COLLATE
+Ordna
+; Collate
+;
+MSG_PRINTER_SCALING
+Sidskalning:
+; Page Scaling:
+;
+MSG_PRINTER_PAGESPERSHEET
+Sidor per ark:
+; Pages per Sheet:
+;
+MSG_PRINTER_ORDER
+Sidordning:
+; Pages Order:
+;
+MSG_PRINTER_AUTOROTATE
+Autorotera och centrera
+; Auto Rotate and Center
+;
+MSG_PRINTER_DRIVER
+Drivrutin
+; Driver
+;
+MSG_PRINTER_PREFERENCES
+Skrivarinställningar
+; Printer Preferences
+;
+MSG_PRINTER_WINTITLE
+VPDF · Skriv ut dokument
+; VPDF · Print Document
+;
+MSG_PRINTER_PRINT
+Skriv ut
+; _Print
+;
+MSG_PRINTER_CANCEL
+Avbryt
+; Cancel
+;
+MSG_PRINTER_OUTPUT
+Utmatning:
+; Output:
+;
+MSG_PRINTER_ODD
+Udda
+; Odd
+;
+MSG_PRINTER_EVEN
+Jämn
+; Even
+;
+MSG_PRINTER_ODDEVEN
+Udda och jämn
+; Odd and Even
+;
+MSG_PRINTER_NONE
+Ingen
+; None
+;
+MSG_PRINTER_BEST
+Bästa
+; Best
+;
+MSG_PRINTER_MULTIPLE
+Flera sidor per blad
+; Multiple pages per sheet
+;
+MSG_PRINTER_CUSTOM
+Anpassad
+; Custom
+;
+MSG_PRINTER_HORIZONTAL_VERTICAL
+Horisontellt-Vertikalt
+; Horizontal-Vertical
+MSG_PRINTER_HORIZONTAL_VERTICALREVERSED
+Horisontellt - Vertikalt omvänd
+; Horizontal - Vertical Reversed
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL
+Horisontellt omvänd-Vertikalt
+; Horizontal Reversed-Vertical
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL_REVERSED
+Horisontellt omvänd-Vertikalt omvänd
+; Horizontal Reversed-Vertical Reversed
+MSG_PRINTER_VERTICAL_HORIZONTAL
+Vertikalt-Horisontellt
+; Vertical-Horizontal
+MSG_PRINTER_VERTICALREVERSED_HORIZONTAL
+Vertikalt omvänd-Horisontellt
+; Vertical Reversed-Horizontal
+MSG_PRINTER_VERTICAL_HORIZONTALREVERSED
+Vertikalt-Horisontellt omvänd
+; Vertical-Horizontal Reversed
+MSG_PRINTER_VERTICAL_REVERSED_HORIZONTALREVERSED
+Vertikalt omvänd-Horisontellt omvänd
+; Vertical Reversed-Horizontal Reversed
+MSG_PRINTER_ABORT
+Avbryt
+; Abort
+;
+MSG_MENU_PROJECT
+Projekt
+; Project
+;
+MSG_MENU_NEWWIN
+Nytt fönster...
+; New Window...
+MSG_MENU_NEWTAB
+Ny flik
+; New Tab
+MSG_MENU_FILE
+Öppna fil...
+; Open File...
+MSG_MENU_RECENT
+Öppna senaste
+; Open Recent
+MSG_MENU_PRINT
+Skriv ut...
+; Print...
+MSG_MENU_ABOUT
+Om...
+; About...
+MSG_MENU_QUIT
+Avsluta
+; Quit
+MSG_MENU_EDIT
+Redigera
+; Edit
+MSG_MENU_COPY
+Kopiera
+; Copy
+MSG_MENU_LOG
+Logg...
+; Log...
+MSG_MENU_SETTINGS
+Inställningar
+; Settings
+MSG_MENU_SETTINGS_SETTINGS
+Inställningar...
+; Settings...
+MSG_MENU_SETTINGS_SAVE
+Spara som standard
+; Save as Default
+MSG_MENU_SETTINGS_MUI
+MUI...
+; MUI...
+MSG_MENU_WINDOWS
+Fönster
+; Windows
+MSG_NOFILE
+Ingen fil laddad.
+; No file loaded.
+MSG_SAVE
+_Spara
+; _Save
+MSG_CANCEL
+A_vbryt
+; _Cancel
+MSG_USE
+_Använd
+; _Use
+MSG_WINDOWS
+Fönster
+; Windows
+MSG_SETTINGS_LAYOUT
+Layout:
+; Layout:
+MSG_SETTINGS_SCALING
+Skalning:
+; Scaling:
+MSG_SETTINGS_OUTLINE
+Öppna dokumentöversikt
+; Open document outline
+MSG_SETTINGS_DOCUMENT
+Dokument
+; Document
+MSG_SETTINGS_LOGWINDOW
+Öppna loggfönstret automatiskt
+; Open log window automatically
+MSG_REQ_OPEN
+Välj fil för att öppna...
+; Select File to Open...
+MSG_REQ_SAVE
+Välj fil att spara...
+; Select File to Save...
+MSG_REQ_DRAWER
+Välj låda...
+; Select Drawer...
+MSG_TOOLBAR_ZOOMIN
+Zooma in
+; Zoom In
+MSG_TOOLBAR_ZOOMOUT
+Zooma ut
+; Zoom Out
+MSG_TOOLBAR_COUNTERCLOCKWISE
+Rotera moturs
+; Rotate counterclockwise
+MSG_TOOLBAR_CLOCKWISE
+Rotera medurs
+; Rotate clockwise
+MSG_TOOLBAR_MARK
+_Markera
+; _Mark
+MSG_TOOLBAR_SCROLL
+_Skrolla
+; _Scroll
+MSG_TOOLBAR_OUTLINE
+_Översikt
+; _Outline
+MSG_TOOLBAR_FITPAGE
+Anpassa sidan
+; Fit Page
+MSG_TOOLBAR_FITWIDTH
+Anpassa bredd
+; Fit Width
+MSG_TOOLBAR_SINGLE
+Enkel
+; Single
+MSG_TOOLBAR_CONTINUOUS
+Kontinuerlig
+; Continuous
+MSG_TOOLBAR_FACING
+Uppslag
+; Facing
+MSG_TOOLBAR_CONT_FACING
+Kontinuerligt uppslag
+; Continuous Facing
+MSG_SEARCH_NEXT
+_Nästa
+; _Next
+MSG_SEARCH_PREV
+_Föregående
+; _Prev
+MSG_SEARCH_END
+Slut på dokumentet
+; End of Document
+MSG_SEARCH_LABEL
+Sö_k:
+; S_earch:
+MSG_SLIDER_PAGE
+Sida %ld/%ld
+; Page %ld/%ld
+MSG_MENU_SAVE
+Spara fil...
+; Save File...
+MSG_MENU_EXPORT
+Exportera till bitmapp...
+; Export to bitmap...
+MSG_EXPORT_WINTITLE
+Exportera dokument till bitmapp
+; Export document to bitmaps
+MSG_SETTINGS_LAYOUT_SINGLE
+Enkel sida
+; Single page
+MSG_SETTINGS_LAYOUT_CONTINOUS
+Kontinuerligt
+; Continuous pages
+MSG_SETTINGS_LAYOUT_FACING
+Uppslag
+; Facing pages
+MSG_SETTINGS_LAYOUT_CONTINOUS_FACING
+Kontinuerligt uppslag
+; Continuous facing pages
+MSG_SETTINGS_SCALINGS_WINDOW
+Anpassa till fönster
+; Fit to window
+MSG_SETTINGS_SCALINGS_WIDTH
+Anpassa till fönsterbredden
+; Fit to window width
+MSG_SETTINGS_SCALINGS_ORIGINAL
+Orginal
+; Original
+MSG_MENU_VIEW
+Visa
+; View
+MSG_MENU_VIEW_FULLSCREEN
+Fullskärm
+; Fullscreen
+MSG_MENU_VIEW_OUTLINE
+Visa översikt
+; Show outline
+MSG_MENU_VIEW_TOOLBAR
+Visa verktygsfält
+; Show toolbar
+MSG_MENU_SET_ZOOM
+Ställ in zoom
+; Set zoom
+MSG_MENU_SET_LAYOUT
+Ställ in layout
+; Set layout
+MSG_MENU_VIEW_SET_LAYOUT_SINGLE
+Enkel sida
+; Single page
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS
+Kontinuerligt
+; Continuous pages
+MSG_MENU_VIEW_SET_LAYOUT_FACING
+Uppslag
+; Facing pages
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS_FACING
+Kontinuerligt uppslag
+; Continuous facing pages
+MSG_MENU_ZOOM_FIT_PAGE
+Anpassa sidan
+; Fit page
+MSG_MENU_ZOOM_FIT_WIDTH
+Anpassa bredd
+; Fit width
+MSG_LOAD_IMAGE
+Ladda bild...
+; Load image...
+MSG_SAVE_IMAGE
+Spara bild...
+; Save image...
+MSG_PRINTING
+Utskrift
+; Printing
+MSG_SETTINGS_COLOR_REPRODUCTION
+Färgåtergivning:
+; Color Reproduction:
+MSG_SETTINGS_COLOR_REPRODUCTION_FAST
+Snabb
+; Fast
+MSG_SETTINGS_COLOR_REPRODUCTION_ACCURATE
+Exakt
+; Accurate
+MSG_PRINTER_OUTPUTPATH
+Utskriftväg:
+; Output path:
+;
+MSG_PRINTER_OUTFILE
+(Till fil)
+; (ToFile)
+;
+MSG_PRINTER_PROFILE
+Profil
+; Profile
+;
+MSG_PRINTER_CURRENT_PAGE
+Nuvarande sida
+; Current page
+;
+MSG_EXPORT_PARAMETERS
+Exportera parametrar
+; Export parameters
+;
+MSG_EXPORT_OUTPUTFILE
+Utdatafil:
+; Output file:
+;
+MSG_EXPORT_BASENAME
+Välj basnamn
+; Select base name
+;
+MSG_EXPORT_SUFFIX
+suffix
+; suffix
+;
+MSG_EXPORT_DPI
+DPI:
+; DPI:
+;
+MSG_EXPORT_PAGES
+Sidor
+; Pages
+;
+MSG_EXPORT_EXPORT
+Exportera
+; _Export
+;
+MSG_EXPORT_STATUS
+Spara sida %ld...
+; Saving page %ld...
+;
+MSG_EXPORT_ERROR_TITLE
+VPDF Fel vid exportering av dokument
+; VPDF Export Document Error
+;
+MSG_EXPORT_ERROR_STATUS
+Det gick inte att initiera utenhet
+; Failed to initialize output device
+;
+MSG_PRINTER_BOOKLET
+Häfte
+; Booklet
+;
+MSG_TOOLBAR_NOTES
+An_teckningar
+; No_tes
+;
+MSG_MENU_VIEW_NOTES
+Visa anteckningar
+; Show notes
+;
+MSG_SETTINGS_NOTES
+Öppna dokumentanteckningar
+; Open document notes
+;
+MSG_SETTINGS_PAGEDIMS
+Visa sidmått
+; Show page dimensions
+;
+MSG_MENU_VIEW_PAGEDIMS
+Visa sidmått
+; Show page dimensions
+;
+MSG_MENU_SETTINGS_SNAPSHOT_DOCVIEW
+Spara dokumentlayout
+; Snapshot Document Layout
+;
+MSG_MENU_MERGE_FILES
+Sammanfoga öppna dokument
+; Merge Open Documents
+;
+MSG_MENU_SAVEPAGE
+Spara aktuell sida till fil...
+; Save current page to File...
+;
+MSG_REQ_PASSWORD_TITLE
+Dokumentet är lösenordsskyddat
+; The document is password protected
+;
+MSG_REQ_PASSWORD_ENTER
+Ange lösenord:
+; Enter Password:
+;

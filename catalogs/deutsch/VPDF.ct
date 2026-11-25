@@ -1,0 +1,475 @@
+## version $VER: VPDF.catalog 1.10 (24.02.2025)
+## language deutsch
+## codeset 0
+;
+## chunk AUTH Markus Lunk
+;
+; VPDF locales
+; Michal Zukowski 2015-2022
+;
+MSG_APPLICATION_DESCRIPTION
+PDF-Anzeiger mit Poppler-Engine.
+; PDF Viewer
+;
+MSG_PRINTER_RANGE
+Druckbereich
+; Print Range
+;
+MSG_PRINTER_PAGES
+Seiten:
+; Pages:
+;
+MSG_PRINTER_FIRSTPAGE
+Erste Seite:
+; First Page:
+;
+MSG_PRINTER_LASTPAGE
+Letzte Seite:
+; Last Page:
+;
+MSG_PRINTER_MANUAL
+Manuelle Auswahl
+; Manual Selection
+;
+MSG_PRINTER_RESET
+Reset
+; Reset
+;
+MSG_PRINTER_REVERSE
+Seiten rückwärts
+; Reverse Pages
+;
+MSG_PRINTER_ORIENTATION
+Seitenorientierung
+; Page Orientation
+;
+MSG_PRINTER_COPIES
+Kopien:
+; Copies:
+;
+MSG_PRINTER_COLLATE
+Sortieren
+; Collate
+;
+MSG_PRINTER_SCALING
+Seitenskalierung:
+; Page Scaling:
+;
+MSG_PRINTER_PAGESPERSHEET
+Seiten pro Blatt:
+; Pages per Sheet:
+;
+MSG_PRINTER_ORDER
+Seitenreihenfolge:
+; Pages Order:
+;
+MSG_PRINTER_AUTOROTATE
+Automatisches Rotieren and Zentrieren
+; Auto Rotate and Center
+;
+MSG_PRINTER_DRIVER
+Treiber
+; Driver
+;
+MSG_PRINTER_PREFERENCES
+Druckereinstellungen
+; Printer Preferences
+;
+MSG_PRINTER_WINTITLE
+VPDF · Dokument drucken
+; VPDF · Print Document
+;
+MSG_PRINTER_PRINT
+_Drucken
+; _Print
+;
+MSG_PRINTER_CANCEL
+Abbre_chen
+; Cancel
+;
+MSG_PRINTER_OUTPUT
+Ausgabe:
+; Output:
+;
+MSG_PRINTER_ODD
+Ungerade
+; Odd
+;
+MSG_PRINTER_EVEN
+Gerade
+; Even
+;
+MSG_PRINTER_ODDEVEN
+Ungerade und gerade
+; Odd and Even
+;
+MSG_PRINTER_NONE
+Keine
+; None
+;
+MSG_PRINTER_BEST
+Beste(r)
+; Best
+;
+MSG_PRINTER_MULTIPLE
+Mehrere Seiten pro Blatt
+; Multiple pages per sheet
+;
+MSG_PRINTER_CUSTOM
+Angepasst
+; Custom
+;
+MSG_PRINTER_HORIZONTAL_VERTICAL
+Horizontal-Vertikal
+; Horizontal-Vertical
+MSG_PRINTER_HORIZONTAL_VERTICALREVERSED
+Horizontal - Vertikal umgekehrt
+; Horizontal - Vertical Reversed
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL
+Horizontal umgekehrt-vertikal
+; Horizontal Reversed-Vertical
+MSG_PRINTER_HORIZONTALREVERSED_VERTICAL_REVERSED
+Horizontal umgekehrt-Vertikal umgekehrt
+; Horizontal Reversed-Vertical Reversed
+MSG_PRINTER_VERTICAL_HORIZONTAL
+Vertikal-Horizontal
+; Vertical-Horizontal
+MSG_PRINTER_VERTICALREVERSED_HORIZONTAL
+Vertikal umgekehrt-Horizontal
+; Vertical Reversed-Horizontal
+MSG_PRINTER_VERTICAL_HORIZONTALREVERSED
+Vertikal-Horizontal umgekehrt
+; Vertical-Horizontal Reversed
+MSG_PRINTER_VERTICAL_REVERSED_HORIZONTALREVERSED
+Vertikal umgekehrt-Horizontal umgekehrt
+; Vertical Reversed-Horizontal Reversed
+MSG_PRINTER_ABORT
+Abbrechen
+; Abort
+;
+MSG_MENU_PROJECT
+Projekt
+; Project
+;
+MSG_MENU_NEWWIN
+Neues Fenster ...
+; New Window...
+MSG_MENU_NEWTAB
+Neuer Tab
+; New Tab
+MSG_MENU_FILE
+Datei öffnen ...
+; Open File...
+MSG_MENU_RECENT
+Aktuelle öffnen
+; Open Recent
+MSG_MENU_PRINT
+Drucken ...
+; Print...
+MSG_MENU_ABOUT
+Über ...
+; About...
+MSG_MENU_QUIT
+Beenden
+; Quit
+MSG_MENU_EDIT
+Bearbeiten
+; Edit
+MSG_MENU_COPY
+Kopieren
+; Copy
+MSG_MENU_LOG
+Log ...
+; Log...
+MSG_MENU_SETTINGS
+Einstellungen
+; Settings
+MSG_MENU_SETTINGS_SETTINGS
+VPDF ...
+; Settings...
+MSG_MENU_SETTINGS_SAVE
+Als Vorgabewert speichern
+; Save as Default
+MSG_MENU_SETTINGS_MUI
+MUI ...
+; MUI...
+MSG_MENU_WINDOWS
+Fenster
+; Windows
+MSG_NOFILE
+Keine Datei geladen.
+; No file loaded.
+MSG_SAVE
+_Speichern
+; _Save
+MSG_CANCEL
+Abbre_chen
+; _Cancel
+MSG_USE
+Ben_utzen
+; _Use
+MSG_WINDOWS
+Fenster
+; Windows
+MSG_SETTINGS_LAYOUT
+Layout:
+; Layout:
+MSG_SETTINGS_SCALING
+Skalierung:
+; Scaling:
+MSG_SETTINGS_OUTLINE
+Dokumentgliederung öffnen
+; Open document outline
+MSG_SETTINGS_DOCUMENT
+Dokument
+; Document
+MSG_SETTINGS_LOGWINDOW
+Log-Fenster automatisch öffnen
+; Open log window automatically
+MSG_REQ_OPEN
+Datei zum Öffnen auswählen ...
+; Select File to Open...
+MSG_REQ_SAVE
+Datei zum Speichern auswählen ...
+; Select File to Save...
+MSG_REQ_DRAWER
+Verzeichnis auswählen ...
+; Select Drawer...
+MSG_TOOLBAR_ZOOMIN
+Hineinzoomen
+; Zoom In
+MSG_TOOLBAR_ZOOMOUT
+Herauszoomen
+; Zoom Out
+MSG_TOOLBAR_COUNTERCLOCKWISE
+Gegen den Uhrzeigersinn rotieren
+; Rotate counterclockwise
+MSG_TOOLBAR_CLOCKWISE
+Im Uhrzeigersinn rotieren
+; Rotate clockwise
+MSG_TOOLBAR_MARK
+_Markieren
+; _Mark
+MSG_TOOLBAR_SCROLL
+R_ollen
+; _Scroll
+MSG_TOOLBAR_OUTLINE
+_Gliederung
+; _Outline
+MSG_TOOLBAR_FITPAGE
+Seite anpassen
+; Fit Page
+MSG_TOOLBAR_FITWIDTH
+Breite anpassen
+; Fit Width
+MSG_TOOLBAR_SINGLE
+Einzeln
+; Single
+MSG_TOOLBAR_CONTINUOUS
+Fortlaufend
+; Continuous
+MSG_TOOLBAR_FACING
+Gegenüberliegend
+; Facing
+MSG_TOOLBAR_CONT_FACING
+Fortlaufend gegenüberliegend
+; Continuous Facing
+MSG_SEARCH_NEXT
+_Nächste
+; _Next
+MSG_SEARCH_PREV
+_Vorherige
+; _Prev
+MSG_SEARCH_END
+Dokumentende
+; End of Document
+MSG_SEARCH_LABEL
+Suchen:
+; S_earch:
+MSG_SLIDER_PAGE
+Seite %ld/%ld
+; Page %ld/%ld
+MSG_MENU_SAVE
+Datei speichern ...
+; Save File...
+MSG_MENU_EXPORT
+Als Bitmap exportieren ...
+; Export to bitmap...
+MSG_EXPORT_WINTITLE
+Dokument als Bitmaps exportieren
+; Export document to bitmaps
+MSG_SETTINGS_LAYOUT_SINGLE
+Einzelne Seite
+; Single page
+MSG_SETTINGS_LAYOUT_CONTINOUS
+Fortlaufende Seiten
+; Continuous pages
+MSG_SETTINGS_LAYOUT_FACING
+Gegenüberliegende Seiten
+; Facing pages
+MSG_SETTINGS_LAYOUT_CONTINOUS_FACING
+Fortlaufend gegenüberliegende Seiten
+; Continuous facing pages
+MSG_SETTINGS_SCALINGS_WINDOW
+An Fenster anpassen
+; Fit to window
+MSG_SETTINGS_SCALINGS_WIDTH
+An Fensterbreite anpassen
+; Fit to window width
+MSG_SETTINGS_SCALINGS_ORIGINAL
+Original
+; Original
+MSG_MENU_VIEW
+Ansicht
+; View
+MSG_MENU_VIEW_FULLSCREEN
+Vollbild
+; Fullscreen
+MSG_MENU_VIEW_OUTLINE
+Gliederung anzeigen
+; Show outline
+MSG_MENU_VIEW_TOOLBAR
+Werkzeugleiste anzeigen
+; Show toolbar
+MSG_MENU_SET_ZOOM
+Zoom einstellen
+; Set zoom
+MSG_MENU_SET_LAYOUT
+Layout einstellen
+; Set layout
+MSG_MENU_VIEW_SET_LAYOUT_SINGLE
+Einzelne Seite
+; Single page
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS
+Fortlaufende Seiten
+; Continuous pages
+MSG_MENU_VIEW_SET_LAYOUT_FACING
+Gegenüberliegende Seiten
+; Facing pages
+MSG_MENU_VIEW_SET_LAYOUT_CONTINOUS_FACING
+Fortlaufend gegenüberliegende Seiten
+; Continuous facing pages
+MSG_MENU_ZOOM_FIT_PAGE
+An Seite anpassen
+; Fit page
+MSG_MENU_ZOOM_FIT_WIDTH
+An Breite anpassen
+; Fit width
+MSG_LOAD_IMAGE
+Bild laden ...
+; Load image...
+MSG_SAVE_IMAGE
+Bild speichern ...
+; Save image...
+MSG_PRINTING
+Drucken
+; Printing
+MSG_SETTINGS_COLOR_REPRODUCTION
+Farbreproduktion:
+; Color Reproduction:
+MSG_SETTINGS_COLOR_REPRODUCTION_FAST
+Schnell
+; Fast
+MSG_SETTINGS_COLOR_REPRODUCTION_ACCURATE
+Exakt
+; Accurate
+MSG_PRINTER_OUTPUTPATH
+Ausgabepfad:
+; Output path:
+;
+MSG_PRINTER_OUTFILE
+(NachDatei)
+; (ToFile)
+;
+MSG_PRINTER_PROFILE
+Profil
+; Profile
+;
+MSG_PRINTER_CURRENT_PAGE
+Aktuelle Seite
+; Current page
+;
+MSG_EXPORT_PARAMETERS
+Exportparameter
+; Export parameters
+;
+MSG_EXPORT_OUTPUTFILE
+Ausgabedatei:
+; Output file:
+;
+MSG_EXPORT_BASENAME
+Basisnamen auswählen
+; Select base name
+;
+MSG_EXPORT_SUFFIX
+Suffix
+; suffix
+;
+MSG_EXPORT_DPI
+DPI:
+; DPI:
+;
+MSG_EXPORT_PAGES
+Seiten
+; Pages
+;
+MSG_EXPORT_EXPORT
+Export
+; _Export
+;
+MSG_EXPORT_STATUS
+Speichere %ld Seiten ...
+; Saving page %ld...
+;
+MSG_EXPORT_ERROR_TITLE
+VPDF-Fehler beim Dokumentexport
+; VPDF Export Document Error
+;
+MSG_EXPORT_ERROR_STATUS
+Konnte Ausgabegerät nicht initialisieren
+; Failed to initialize output device
+;
+MSG_PRINTER_BOOKLET
+Broschüre
+; Booklet
+;
+MSG_TOOLBAR_NOTES
+No_tizen
+; No_tes
+;
+MSG_MENU_VIEW_NOTES
+Notizen zeigen
+; Show notes
+;
+MSG_SETTINGS_NOTES
+Dokumentnotizen zeigen
+; Open document notes
+;
+MSG_SETTINGS_PAGEDIMS
+Seitendimensionen zeigen
+; Show page dimensions
+;
+MSG_MENU_VIEW_PAGEDIMS
+Seitendimensionen zeigen
+; Show page dimensions
+;
+MSG_MENU_SETTINGS_SNAPSHOT_DOCVIEW
+Dokumentlayout fixieren
+; Snapshot Document Layout
+;
+MSG_MENU_MERGE_FILES
+Offene Dokumente verbinden
+; Merge Open Documents
+;
+MSG_MENU_SAVEPAGE
+Aktuelle Seite in Datei speichern ...
+; Save current page to File...
+;
+MSG_REQ_PASSWORD_TITLE
+Das Dokument ist passwortgeschützt
+; The document is password protected
+;
+MSG_REQ_PASSWORD_ENTER
+Passwort eingeben:
+; Enter Password:
+;
